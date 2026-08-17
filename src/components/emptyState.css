@@ -1,0 +1,28 @@
+.empty-state {
+  text-align: center;
+  padding: 130px 24px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.empty-state__rule {
+  display: inline-block;
+  width: 44px;
+  height: 3px;
+  background: var(--color-bronze);
+  margin-bottom: 26px;
+}
+
+.empty-state h3 {
+  font-size: 30px;
+  margin-bottom: 14px;
+  color: var(--color-text);
+}
+
+.empty-state p {
+  font-family: var(--font-nav);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}

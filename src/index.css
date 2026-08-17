@@ -1,0 +1,270 @@
+/* ============================================
+   Jaffna Bulls — Design Tokens
+   ============================================ */
+:root {
+  /* Brand palette */
+  --color-bronze: #d9793d;
+  --color-bronze-dark: #c2672f;
+  --color-brown-dark: #823d18;
+  --color-brown-darker: #5c2b11;
+  --color-brown-light: #f6b281;
+
+  --color-black: #0d0d0d;
+  --color-black-soft: #161311;
+  --color-ink: #1a1a1a;
+
+  --color-cream: #f4f1ea;
+  --color-cream-dark: #ece7dc;
+  --color-white: #ffffff;
+
+  --color-text: #1c1a17;
+  --color-text-muted: #6b645b;
+  --color-text-on-dark: #f4f1ea;
+  --color-text-on-dark-muted: #b9b2a6;
+
+  /* Typography */
+  --font-display: 'Archivo Black', 'Oswald', 'Inter', sans-serif;
+  --font-nav: 'Oswald', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --container-width: 1320px;
+  --container-pad: 40px;
+  --header-height: 88px;
+
+  /* Effects */
+  --shadow-card: 0 18px 40px -22px rgba(13, 13, 13, 0.35);
+  --shadow-soft: 0 8px 24px -12px rgba(13, 13, 13, 0.25);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: var(--font-display);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-bronze);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  margin-bottom: 18px;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--color-bronze);
+}
+
+.eyebrow--light {
+  color: var(--color-brown-light);
+}
+.eyebrow--light::before {
+  background: var(--color-brown-light);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  border: 1.5px solid transparent;
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  background: var(--color-bronze);
+  color: var(--color-black);
+  border-color: var(--color-bronze);
+}
+.btn--primary:hover {
+  background: var(--color-brown-light);
+  border-color: var(--color-brown-light);
+}
+
+.btn--outline-dark {
+  background: transparent;
+  color: var(--color-white);
+  border-color: rgba(244, 241, 234, 0.35);
+}
+.btn--outline-dark:hover {
+  border-color: var(--color-bronze);
+  color: var(--color-bronze);
+}
+
+.btn--outline-light {
+  background: transparent;
+  color: var(--color-black);
+  border-color: rgba(13, 13, 13, 0.25);
+}
+.btn--outline-light:hover {
+  border-color: var(--color-black);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 72px 0;
+  }
+  :root {
+    --container-pad: 24px;
+  }
+}
+
+/* ============================================
+   Shared: Person / Staff cards
+   ============================================ */
+.person-card {
+  background: var(--color-white);
+  border: 1px solid rgba(13, 13, 13, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.person-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+}
+
+.person-card__avatar {
+  background: linear-gradient(150deg, var(--color-black-soft), var(--color-black));
+  height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.person-card__avatar span {
+  width: 64px;
+  height: 64px;
+  border: 1.5px solid var(--color-bronze);
+  color: var(--color-bronze);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-nav);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+}
+
+.person-card__body {
+  padding: 22px 24px 26px;
+}
+
+.person-card__body h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.person-card__body p {
+  font-family: var(--font-nav);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+}

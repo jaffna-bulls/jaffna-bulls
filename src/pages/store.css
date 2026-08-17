@@ -1,0 +1,110 @@
+.store-catalogue {
+  background: var(--color-cream);
+}
+
+.store-catalogue__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 44px;
+}
+
+.store-catalogue__head h2 {
+  font-size: clamp(32px, 4vw, 46px);
+}
+
+.store-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.store-filters__btn {
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 11px 20px;
+  border: 1px solid rgba(13, 13, 13, 0.2);
+  background: transparent;
+  color: var(--color-text);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.store-filters__btn.is-active {
+  background: var(--color-black);
+  border-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.store-filters__btn:hover:not(.is-active) {
+  border-color: var(--color-bronze);
+  color: var(--color-bronze);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: var(--color-white);
+  border: 1px solid rgba(13, 13, 13, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+}
+
+.product-card__image {
+  height: 240px;
+  background: var(--color-cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card__body {
+  padding: 26px;
+}
+
+.product-card__label {
+  display: block;
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  margin-bottom: 8px;
+}
+
+.product-card__body h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.product-card__body p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 980px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,40 @@
+.coaching {
+  background: var(--color-cream);
+}
+
+.coaching__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.coaching__head h2 {
+  font-size: clamp(32px, 4vw, 46px);
+}
+
+.coaching__intro {
+  max-width: 380px;
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+.coaching__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 980px) {
+  .coaching__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .coaching__grid {
+    grid-template-columns: 1fr;
+  }
+}

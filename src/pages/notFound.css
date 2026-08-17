@@ -1,0 +1,23 @@
+.not-found {
+  background: var(--color-black);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.not-found__inner {
+  padding: 100px 0;
+}
+
+.not-found h1 {
+  color: var(--color-white);
+  font-size: clamp(40px, 6vw, 64px);
+  margin-bottom: 20px;
+}
+
+.not-found__text {
+  color: var(--color-text-on-dark-muted);
+  font-size: 16px;
+  margin-bottom: 32px;
+  max-width: 460px;
+}
