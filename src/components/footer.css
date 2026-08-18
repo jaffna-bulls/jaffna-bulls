@@ -56,7 +56,10 @@
   letter-spacing: 0.04em;
   color: var(--color-text-on-dark);
   border-radius: 2px;
-  transition: border-color 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
+  transition:
+    border-color 0.2s var(--ease),
+    color 0.2s var(--ease),
+    transform 0.2s var(--ease);
 }
 
 .footer__social a:hover {
@@ -86,4 +89,10 @@
     flex-direction: column;
     text-align: center;
   }
+}
+
+.footer__logo {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
 }

@@ -1,6 +1,6 @@
-import PageHero from '../components/PageHero';
-import RugbySubnav from '../components/RugbySubnav';
-import EmptyState from '../components/EmptyState';
+import PageHero from "../components/PageHero";
+import RugbySubnav from "../components/RugbySubnav";
+import EmptyState from "../components/EmptyState";
 
 export default function RugbyFixtures() {
   return (
@@ -10,7 +10,7 @@ export default function RugbyFixtures() {
         title="Strength. Skill. Bull Nation."
         description="The dedicated home for all Jaffna Bulls rugby content."
       >
-        <RugbySubnav />
+        {/* <RugbySubnav /> */}
       </PageHero>
 
       <section className="section">

@@ -1,31 +1,36 @@
-import { Link } from 'react-router-dom';
-import Logo from '../components/Logo';
-import './home.css';
+import { Link } from "react-router-dom";
+import Logo from "../components/Logo";
+import nawalokaPilingLogo from "../assets/Sponsors/nawaloka_piling.webp";
+import adviceLabLogo from "../assets/Sponsors/advicelab_logo.webp";
+import "./home.css";
 
 const UPDATES = [
   {
-    tag: 'Franchise News',
-    title: 'Building a Bold New Sporting Legacy',
-    text: 'Follow the latest announcements from Jaffna Bulls as the franchise begins its journey.',
+    tag: "Franchise News",
+    title: "Building a Bold New Sporting Legacy",
+    text: "Follow the latest announcements from Jaffna Bulls as the franchise begins its journey.",
   },
   {
-    tag: 'Rugby',
-    title: 'Rugby Programme Takes Centre Stage',
-    text: 'Team and player updates will be published as official details are confirmed.',
+    tag: "Rugby",
+    title: "Rugby Programme Takes Centre Stage",
+    text: "Team and player updates will be published as official details are confirmed.",
   },
   {
-    tag: 'Community',
-    title: 'One Powerful Identity',
-    text: 'Connecting athletes, supporters, partners, and communities across the region.',
+    tag: "Community",
+    title: "One Powerful Identity",
+    text: "Connecting athletes, supporters, partners, and communities across the region.",
   },
 ];
 
-const SPONSOR_TIERS = [
-  'Principal Partner',
-  'Official Partner',
-  'Official Partner',
-  'Supporting Partner',
-  'Supporting Partner',
+const SPONSORS = [
+  {
+    name: "Nawaloka Piling",
+    logo: nawalokaPilingLogo,
+  },
+  {
+    name: "Advice Lab",
+    logo: adviceLabLogo,
+  },
 ];
 
 export default function Home() {
@@ -37,7 +42,9 @@ export default function Home() {
         </div>
         <div className="container hero__grid">
           <div className="hero__copy">
-            <p className="eyebrow eyebrow--light">Official Home of Jaffna Bulls</p>
+            <p className="eyebrow eyebrow--light">
+              Official Home of Jaffna Bulls
+            </p>
             <h1>
               One Team.
               <br />
@@ -45,12 +52,12 @@ export default function Home() {
               <br />
               <span className="hero__accent">One Bull Nation.</span>
             </h1>
-            <p className="hero__desc">
+            {/* <p className="hero__desc">
               Welcome to Jaffna Bulls, a bold new sporting franchise built on pride, passion,
               and ambition. Born to represent the spirit of Northern Sri Lanka, Jaffna Bulls
               brings together athletes, supporters, partners, and communities under one
               powerful identity.
-            </p>
+            </p> */}
             <div className="hero__actions">
               <Link to="/about-us" className="btn btn--primary">
                 Learn More
@@ -61,7 +68,11 @@ export default function Home() {
             </div>
           </div>
           <div className="hero__crest">
-            <img src="/header-logo.png" alt="Jaffna Bulls crest" className="hero__crest-image" />
+            <img
+              src="/header-logo.png"
+              alt="Jaffna Bulls crest"
+              className="hero__crest-image"
+            />
           </div>
         </div>
       </section>
@@ -72,10 +83,10 @@ export default function Home() {
             <p className="eyebrow">From the Bull Nation</p>
             <h2>Latest Updates</h2>
           </div>
-          <p className="updates__intro">
-            A dedicated hub for franchise news, rugby announcements, player signings, and
-            match-related updates.
-          </p>
+          {/* <p className="updates__intro">
+            A dedicated hub for franchise news, rugby announcements, player
+            signings, and match-related updates.
+          </p> */}
         </div>
 
         <div className="container updates__grid">
@@ -95,16 +106,20 @@ export default function Home() {
             <p className="eyebrow">Match Centre</p>
             <h2>Upcoming Fixtures</h2>
           </div>
-          <p className="fixtures-teaser__intro">
+          {/* <p className="fixtures-teaser__intro">
             Official league fixtures will appear here once confirmed.
-          </p>
+          </p> */}
         </div>
 
         <div className="container">
           <div className="fixture-row">
             <span className="fixture-row__team">Jaffna Bulls</span>
-            <span className="fixture-row__meta">Fixtures to be confirmed by the league</span>
-            <span className="fixture-row__team fixture-row__team--right">Opponent</span>
+            <span className="fixture-row__meta">
+              Fixtures to be confirmed by the league
+            </span>
+            <span className="fixture-row__team fixture-row__team--right">
+              Opponent
+            </span>
           </div>
         </div>
       </section>
@@ -114,8 +129,8 @@ export default function Home() {
           <div>
             <h2>Wear the Pride.</h2>
             <p>
-              Explore official Jaffna Bulls merchandise and show your support for the Bull
-              Nation.
+              Explore official Jaffna Bulls merchandise and show your support
+              for the Bull Nation.
             </p>
           </div>
           <Link to="/store" className="btn btn--outline-dark">
@@ -130,15 +145,12 @@ export default function Home() {
             <p className="eyebrow">Our Partners</p>
             <h2>Our Sponsors</h2>
           </div>
-          <p className="sponsors__intro">
-            Sponsor logos will be displayed by category as partnerships are confirmed.
-          </p>
         </div>
 
-        <div className="container sponsors__grid">
-          {SPONSOR_TIERS.map((tier, i) => (
-            <div className="sponsor-slot" key={`${tier}-${i}`}>
-              {tier}
+        <div className="container sponsors__logos">
+          {SPONSORS.map((sponsor) => (
+            <div className="sponsor-logo" key={sponsor.name}>
+              <img src={sponsor.logo} alt={sponsor.name} />
             </div>
           ))}
         </div>
