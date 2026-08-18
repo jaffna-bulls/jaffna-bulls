@@ -9,10 +9,16 @@
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(13, 13, 13, 1) 0%, rgba(13, 13, 13, 1) 52%, rgba(13, 13, 13, 0.34) 52%, rgba(13, 13, 13, 0.34) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 13, 13, 1) 0%,
+    rgba(13, 13, 13, 1) 52%,
+    rgba(13, 13, 13, 0.34) 52%,
+    rgba(13, 13, 13, 0.34) 100%
+  );
 }
 
 .hero__diagonal {
@@ -97,7 +103,11 @@
   }
 
   .hero::before {
-    background: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(13, 13, 13, 0.96) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(13, 13, 13, 1) 0%,
+      rgba(13, 13, 13, 0.96) 100%
+    );
   }
 
   .hero__diagonal {
@@ -167,7 +177,10 @@
   border: 1px solid rgba(13, 13, 13, 0.08);
   padding: 32px;
   min-height: 290px;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+  transition:
+    transform 0.25s var(--ease),
+    box-shadow 0.25s var(--ease),
+    border-color 0.25s var(--ease);
 }
 
 .update-card:hover {
@@ -272,7 +285,11 @@
 
 /* ===== CTA banner ===== */
 .cta-banner {
-  background: linear-gradient(120deg, var(--color-brown-dark), var(--color-brown-darker));
+  background: linear-gradient(
+    120deg,
+    var(--color-brown-dark),
+    var(--color-brown-darker)
+  );
   height: 200px;
   text-align: center;
   display: flex;
@@ -343,7 +360,9 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-muted);
-  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+  transition:
+    border-color 0.2s var(--ease),
+    color 0.2s var(--ease);
 }
 
 .sponsor-slot:hover {
@@ -355,4 +374,18 @@
   .sponsors__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.sponsors__logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding-top: 40px;
+}
+
+.sponsor-logo img {
+  width: 400px;
+  height: 200px;
+  object-fit: contain;
 }

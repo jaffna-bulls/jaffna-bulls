@@ -1,13 +1,17 @@
-import PageHero from '../components/PageHero';
-import RugbySubnav from '../components/RugbySubnav';
-import './rugbyCoachingStaff.css';
+import PageHero from "../components/PageHero";
+import RugbySubnav from "../components/RugbySubnav";
+import "./rugbyCoachingStaff.css";
 
 const STAFF = [
-  { initials: 'TR', name: 'Tarinda Ratwatte', role: 'Head of Rugby' },
-  { initials: 'AD', name: 'Asela Deshapriya', role: 'Head Coach' },
-  { initials: 'AD', name: 'Ashane Dissanayake', role: 'Assistant Coach' },
-  { initials: 'VJ', name: 'Vishva Jayasinghe', role: 'Strength & Conditioning Coach' },
-  { initials: 'RC', name: 'Ruskhan Cabraal', role: 'Team Manager' },
+  { initials: "TR", name: "Tarinda Ratwatte", role: "Head of Rugby" },
+  { initials: "AD", name: "Asela Deshapriya", role: "Head Coach" },
+  { initials: "AD", name: "Ashane Dissanayake", role: "Assistant Coach" },
+  {
+    initials: "VJ",
+    name: "Vishva Jayasinghe",
+    role: "Strength & Conditioning Coach",
+  },
+  { initials: "RC", name: "Ruskhan Cabraal", role: "Team Manager" },
 ];
 
 export default function RugbyCoachingStaff() {
@@ -18,7 +22,7 @@ export default function RugbyCoachingStaff() {
         title="Strength. Skill. Bull Nation."
         description="The dedicated home for all Jaffna Bulls rugby content."
       >
-        <RugbySubnav />
+        {/* <RugbySubnav /> */}
       </PageHero>
 
       <section className="section coaching">
@@ -27,9 +31,6 @@ export default function RugbyCoachingStaff() {
             <p className="eyebrow">Rugby Leadership</p>
             <h2>Coaching Staff</h2>
           </div>
-          <p className="coaching__intro">
-            Photos and short biographies will be added when officially provided.
-          </p>
         </div>
 
         <div className="container coaching__grid">

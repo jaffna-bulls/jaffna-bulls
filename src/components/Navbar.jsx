@@ -1,13 +1,26 @@
-import { NavLink, Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import './navbar.css';
+import { NavLink, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import "./navbar.css";
 
 const NAV_LINKS = [
-  { to: '/', label: 'Home' },
-  { to: '/about-us', label: 'About Us' },
-  { to: '/rugby', label: 'Rugby' },
-  { to: '/store', label: 'Store' },
-  { to: '/contact-us', label: 'Contact Us' },
+  { to: "/", label: "Home" },
+  { to: "/about-us", label: "About Us" },
+  {
+    to: "/rugby",
+    label: "Rugby",
+    children: [
+      { to: "/rugby", tag: "Rugby", title: "Home" },
+      { to: "/rugby/squad", tag: "Team", title: "Squad" },
+      {
+        to: "/rugby/coaching-staff",
+        tag: "Leadership",
+        title: "Coaching Staff",
+      },
+      { to: "/rugby/fixtures", tag: "Match Centre", title: "Fixtures" },
+    ],
+  },
+  { to: "/store", label: "Store" },
+  { to: "/contact-us", label: "Contact Us" },
 ];
 
 export default function Navbar() {
@@ -16,39 +29,73 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
+
     onScroll();
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
     setOpen(false);
   }, []);
 
-  const isRugbySection = (path) => path === '/rugby' && window.location.pathname.startsWith('/rugby');
-
   return (
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__inner">
         <Link to="/" className="navbar__brand" onClick={() => setOpen(false)}>
-          <img src="/header-logo.png" alt="Jaffna Bulls" className="navbar__brand-logo" />
+          <img
+            src="/header-logo.png"
+            alt="Jaffna Bulls"
+            className="navbar__brand-logo"
+          />
           <span>Jaffna Bulls</span>
         </Link>
 
-        <nav className={`navbar__nav ${open ? 'navbar__nav--open' : ''}`} aria-label="Primary">
+        <nav
+          className={`navbar__nav ${open ? "navbar__nav--open" : ""}`}
+          aria-label="Primary"
+        >
           <ul>
             {NAV_LINKS.map((link) => (
-              <li key={link.to}>
+              <li
+                key={link.to}
+                className={link.children ? "navbar__nav-item--has-submenu" : ""}
+              >
                 <NavLink
                   to={link.to}
-                  end={link.to === '/'}
-                  className={({ isActive }) =>
-                    isActive || (link.to === '/rugby' && isRugbySection(link.to)) ? 'active' : ''
-                  }
+                  end={link.to === "/" || link.to === "/rugby"}
+                  className={({ isActive }) => (isActive ? "active" : "")}
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
+
+                  {link.children && (
+                    <span
+                      className="navbar__dropdown-icon"
+                      aria-hidden="true"
+                    />
+                  )}
                 </NavLink>
+
+                {link.children && (
+                  <div className="navbar__submenu">
+                    {link.children.map((child) => (
+                      <NavLink
+                        key={child.to}
+                        to={child.to}
+                        // This is important for /rugby.
+                        // Without `end`, /rugby would also match
+                        // /rugby/squad, /rugby/fixtures, etc.
+                        end
+                        onClick={() => setOpen(false)}
+                      >
+                        <span>{child.tag}</span>
+                        {child.title}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ul>
@@ -56,10 +103,11 @@ export default function Navbar() {
 
         <div className="navbar__actions">
           <Link to="/store" className="navbar__cart">
-            Cart · 0
+            Shop Now
           </Link>
+
           <button
-            className={`navbar__toggle ${open ? 'is-open' : ''}`}
+            className={`navbar__toggle ${open ? "is-open" : ""}`}
             aria-label="Toggle navigation menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
