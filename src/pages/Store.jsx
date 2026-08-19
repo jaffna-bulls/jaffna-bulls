@@ -35,7 +35,7 @@ export default function Store() {
         title="Wear the Pride."
         // description="Support the Bull Nation with official Jaffna Bulls merchandise."
       />
-      //!
+
       <section className="section store-coming-soon">
         <div className="container">
           <div className="store-coming-soon__card">

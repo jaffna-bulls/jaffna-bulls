@@ -22,7 +22,7 @@ const STAFF = [
   },
   {
     initials: "AD",
-    name: "Ashane Dissanayake",
+    name: "Ashane Dassanayake",
     role: "Assistant Coach",
     image: Ashane,
   },

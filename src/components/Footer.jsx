@@ -29,7 +29,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.tiktok.com/@jaffnabulls"
+            href="https://www.tiktok.com/@jaffna.bulls?_r=1&_t=ZS-98z0uGsPrds"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok"
