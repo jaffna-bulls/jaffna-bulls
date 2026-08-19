@@ -1,0 +1,51 @@
+.cart-page,
+.checkout-page {
+  background: var(--color-cream);
+}
+
+.cart-layout,
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.cart-item,
+.cart-summary,
+.checkout-summary,
+.bank-details,
+.checkout-form {
+  background: var(--color-white);
+  border: 1px solid rgba(13, 13, 13, 0.1);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 20px;
+}
+
+.cart-item + .cart-item { margin-top: 16px; }
+.cart-item img { width: 140px; height: 140px; object-fit: contain; background: var(--color-cream-dark); }
+.cart-item h2 { font-size: 24px; margin: 6px 0; }
+.cart-item p:not(.eyebrow) { color: var(--color-text-muted); font-size: 14px; }
+.cart-item > strong { align-self: start; font-size: 16px; }
+.cart-item__controls { display: flex; gap: 20px; align-items: center; margin-top: 18px; }
+.quantity-control { display: inline-flex; align-items: center; border: 1px solid rgba(13, 13, 13, 0.2); }
+.quantity-control button { width: 34px; height: 34px; border: 0; background: transparent; cursor: pointer; font-size: 18px; }
+.quantity-control span { min-width: 34px; text-align: center; font-family: var(--font-nav); font-weight: 700; }
+.cart-item__remove { border: 0; background: transparent; color: var(--color-bronze); cursor: pointer; font-family: var(--font-nav); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.cart-summary { padding: 28px; background: var(--color-black); color: var(--color-white); }
+.cart-summary__row { display: flex; justify-content: space-between; padding: 22px 0; margin-bottom: 18px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+.cart-empty { padding: 40px 0; }
+.cart-empty h2 { margin: 8px 0 24px; }
+
+@media (max-width: 760px) {
+  .cart-layout, .checkout-layout { grid-template-columns: 1fr; gap: 24px; }
+  .cart-item { grid-template-columns: 90px 1fr; gap: 16px; }
+  .cart-item img { width: 90px; height: 90px; }
+  .cart-item > strong { grid-column: 2; }
+}

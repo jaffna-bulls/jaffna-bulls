@@ -116,6 +116,23 @@
   transform: translateY(-2px);
 }
 
+.navbar__cart-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.navbar__cart-count {
+  min-width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-black);
+  color: var(--color-bronze);
+  font-size: 10px;
+}
+
 .navbar__toggle {
   display: none;
   flex-direction: column;
