@@ -1,4 +1,8 @@
 .footer {
+  --color-black: #0d0d0d;
+  --color-white: #ffffff;
+  --color-text-on-dark: #f4f1ea;
+  --color-text-on-dark-muted: #b9b2a6;
   background: var(--color-black);
   color: var(--color-text-on-dark-muted);
   text-align: center;

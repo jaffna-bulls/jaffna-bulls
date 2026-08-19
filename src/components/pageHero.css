@@ -1,4 +1,7 @@
 .page-hero {
+  --color-black: #0d0d0d;
+  --color-white: #ffffff;
+  --color-text-on-dark-muted: #b9b2a6;
   position: relative;
   background: var(--color-black);
   overflow: hidden;

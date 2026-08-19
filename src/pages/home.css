@@ -1,5 +1,9 @@
 /* ===== Hero ===== */
 .hero {
+  --color-black: #0d0d0d;
+  --color-white: #ffffff;
+  --color-text-on-dark: #f4f1ea;
+  --color-text-on-dark-muted: #b9b2a6;
   position: relative;
   background: var(--color-black);
   overflow: hidden;
@@ -173,7 +177,7 @@
 
 .update-card {
   position: relative;
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid rgba(13, 13, 13, 0.08);
   padding: 32px;
   min-height: 290px;

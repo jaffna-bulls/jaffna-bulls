@@ -180,7 +180,7 @@
 /* ===== Leadership Cards ===== */
 
 .person-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   display: flex;
   flex-direction: column;
   height: 100%;

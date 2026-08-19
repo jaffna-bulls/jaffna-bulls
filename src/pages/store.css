@@ -54,7 +54,7 @@
 }
 
 .product-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid rgba(13, 13, 13, 0.08);
   overflow: hidden;
   transition:
@@ -233,7 +233,7 @@
   justify-content: center;
   min-height: 54px;
   border: 1px solid rgba(13, 13, 13, 0.12);
-  background: var(--color-white);
+  background: var(--color-surface);
   font-family: var(--font-nav);
   font-size: 13px;
   font-weight: 700;
@@ -292,7 +292,7 @@
   margin: 0 auto;
   padding: 72px 48px;
   text-align: center;
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid rgba(13, 13, 13, 0.08);
   box-shadow: var(--shadow-card);
   overflow: hidden;
