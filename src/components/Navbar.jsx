@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import "./navbar.css";
 
@@ -107,17 +108,18 @@ export default function Navbar({ theme, onToggleTheme }) {
             className={`navbar__theme-toggle ${theme === "dark" ? "is-dark" : ""}`}
             type="button"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             aria-pressed={theme === "dark"}
             onClick={onToggleTheme}
           >
-            <span className="navbar__theme-label">
-              Theme: {theme === "dark" ? "Dark" : "Light"}
-            </span>
-            <span className="navbar__theme-switch" aria-hidden="true">
-              <span className="navbar__theme-icon">
-                {theme === "dark" ? "☾" : "☀"}
+            <span className="navbar__theme-rail" aria-hidden="true">
+              <span className="navbar__theme-indicator" />
+              <span className="navbar__theme-symbol navbar__theme-symbol--sun">
+                <Sun />
               </span>
-              <span className="navbar__theme-thumb" />
+              <span className="navbar__theme-symbol navbar__theme-symbol--moon">
+                <Moon />
+              </span>
             </span>
           </button>
 
