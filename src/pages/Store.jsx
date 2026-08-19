@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageHero from "../components/PageHero";
+import { useCart } from "../context/CartContext";
 import poloTshirt from "../assets/Tshirt/polo.webp";
 import "./store.css";
 
@@ -9,6 +10,7 @@ const PRODUCTS = [
     name: "Founder's Polo",
     type: "apparel",
     image: poloTshirt,
+    price: 6500,
     description:
       "The official Jaffna Bulls Founder's Polo, designed for the Bull Nation.",
   },
@@ -24,6 +26,7 @@ const SIZES = ["S", "M", "L", "XL", "2XL", "3XL", "4XL"];
 export default function Store() {
   const [filter, setFilter] = useState("all");
   const [showSizeChart, setShowSizeChart] = useState(false);
+  const { addToCart } = useCart();
 
   const visible =
     filter === "all" ? PRODUCTS : PRODUCTS.filter((p) => p.type === filter);
@@ -124,6 +127,7 @@ export default function Store() {
                 <button
                   className="btn btn--outline-light btn--block"
                   type="button"
+                  onClick={() => addToCart(product)}
                 >
                   Add to cart
                 </button>
@@ -131,8 +135,8 @@ export default function Store() {
             </article>
           ))}
         </div>
-      </section> */}
-      {/* <section className="cta-banner">
+      </section>
+      <section className="cta-banner">
         <div className="container cta-banner__inner">
           <div>
             <h2>Secure Online Shopping</h2>
@@ -147,7 +151,7 @@ export default function Store() {
           </button>
         </div>
       </section> */}
-      {/* Size Chart Popup */}
+      
       {showSizeChart && (
         <div
           className="size-chart-overlay"
