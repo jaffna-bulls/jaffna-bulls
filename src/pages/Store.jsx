@@ -52,8 +52,8 @@ export default function Store() {
             <h2>Launching Soon.</h2>
 
             <p className="store-coming-soon__text">
-              Our online store is coming soon. Get ready to wear the pride of
-              the Bull Nation.
+              Our online store is coming soon. Stay tuned for official Jaffna
+              Bulls merchandise.
             </p>
 
             <div className="store-coming-soon__line">
