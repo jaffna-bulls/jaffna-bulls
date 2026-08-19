@@ -50,16 +50,18 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(244, 241, 234, 0.25);
-  font-family: var(--font-nav);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
   color: var(--color-text-on-dark);
   border-radius: 2px;
   transition:
     border-color 0.2s var(--ease),
     color 0.2s var(--ease),
     transform 0.2s var(--ease);
+}
+
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .footer__social a:hover {

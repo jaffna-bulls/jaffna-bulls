@@ -25,7 +25,31 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            IG
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="footer__social-icon"
+            >
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg>
           </a>
 
           <a
@@ -34,7 +58,16 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="TikTok"
           >
-            TT
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="footer__social-icon"
+            >
+              <path
+                d="M15.5 4c.3 2 1.5 3.3 3.5 3.5v3.1c-1.4 0-2.6-.4-3.6-1.1v5.8c0 3.1-2.1 5.2-5.1 5.2-2.8 0-4.8-2-4.8-4.7 0-2.8 2.2-4.8 5-4.8.4 0 .8 0 1.2.1v3.1c-.4-.1-.7-.2-1.1-.2-1.1 0-1.9.7-1.9 1.8 0 1 .7 1.7 1.7 1.7 1.1 0 1.9-.8 1.9-2.1V4h3.2Z"
+                fill="currentColor"
+              />
+            </svg>
           </a>
         </div>
       </div>
