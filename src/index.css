@@ -16,6 +16,7 @@
   --color-cream: #f4f1ea;
   --color-cream-dark: #ece7dc;
   --color-white: #ffffff;
+  --color-surface: #ffffff;
 
   --color-text: #1c1a17;
   --color-text-muted: #6b645b;
@@ -23,9 +24,9 @@
   --color-text-on-dark-muted: #b9b2a6;
 
   /* Typography */
-  --font-display: 'Archivo Black', 'Oswald', 'Inter', sans-serif;
-  --font-nav: 'Oswald', 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: "Archivo Black", "Oswald", "Inter", sans-serif;
+  --font-nav: "Oswald", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
 
   /* Layout */
   --container-width: 1320px;
@@ -36,6 +37,16 @@
   --shadow-card: 0 18px 40px -22px rgba(13, 13, 13, 0.35);
   --shadow-soft: 0 8px 24px -12px rgba(13, 13, 13, 0.25);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-surface: #211d19;
+  --color-cream: #171411;
+  --color-cream-dark: #2a241f;
+  --color-text: #f4f1ea;
+  --color-text-muted: #c5bdb1;
+  --color-text-on-dark: #f4f1ea;
 }
 
 * {
@@ -50,10 +61,13 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--color-text);
-  background: var(--color-white);
+  background: var(--color-surface);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.3s var(--ease),
+    color 0.3s var(--ease);
 }
 
 main {
@@ -81,7 +95,11 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   font-family: var(--font-display);
   line-height: 1.05;
@@ -103,7 +121,9 @@ textarea:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
@@ -132,7 +152,7 @@ textarea:focus-visible {
 }
 
 .eyebrow::before {
-  content: '';
+  content: "";
   display: block;
   width: 28px;
   height: 2px;
@@ -159,7 +179,11 @@ textarea:focus-visible {
   padding: 16px 28px;
   border: 1.5px solid transparent;
   border-radius: 2px;
-  transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+  transition:
+    transform 0.25s var(--ease),
+    background 0.25s var(--ease),
+    color 0.25s var(--ease),
+    border-color 0.25s var(--ease);
   white-space: nowrap;
 }
 
@@ -217,10 +241,12 @@ textarea:focus-visible {
    Shared: Person / Staff cards
    ============================================ */
 .person-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid rgba(13, 13, 13, 0.08);
   overflow: hidden;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  transition:
+    transform 0.25s var(--ease),
+    box-shadow 0.25s var(--ease);
 }
 
 .person-card:hover {
@@ -229,7 +255,11 @@ textarea:focus-visible {
 }
 
 .person-card__avatar {
-  background: linear-gradient(150deg, var(--color-black-soft), var(--color-black));
+  background: linear-gradient(
+    150deg,
+    var(--color-black-soft),
+    var(--color-black)
+  );
   height: 168px;
   display: flex;
   align-items: center;

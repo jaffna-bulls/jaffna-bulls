@@ -23,7 +23,7 @@ const NAV_LINKS = [
   { to: "/contact-us", label: "Contact Us" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ theme, onToggleTheme }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { cartCount } = useCart();
@@ -103,11 +103,25 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar__actions">
-          {/* <Link to="/store" className="navbar__cart" aria-label={`Cart with ${cartCount} items`}> */}
+          <button
+            className={`navbar__theme-toggle ${theme === "dark" ? "is-dark" : ""}`}
+            type="button"
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            aria-pressed={theme === "dark"}
+            onClick={onToggleTheme}
+          >
+            <span className="navbar__theme-label">
+              Theme: {theme === "dark" ? "Dark" : "Light"}
+            </span>
+            <span className="navbar__theme-switch" aria-hidden="true">
+              <span className="navbar__theme-icon">
+                {theme === "dark" ? "☾" : "☀"}
+              </span>
+              <span className="navbar__theme-thumb" />
+            </span>
+          </button>
+
           <Link to="/store" className="navbar__cart">
-            {/* <span className="navbar__cart-icon" aria-hidden="true">&#128722;</span>
-            <span>Cart</span>
-            <span className="navbar__cart-count">{cartCount}</span> */}
             Shop Now
           </Link>
 

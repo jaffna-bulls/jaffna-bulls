@@ -1,8 +1,14 @@
-import './pageHero.css';
+import "./pageHero.css";
 
-export default function PageHero({ eyebrow, title, description, children, compact = false }) {
+export default function PageHero({
+  eyebrow,
+  title,
+  description,
+  children,
+  compact = false,
+}) {
   return (
-    <section className={`page-hero ${compact ? 'page-hero--compact' : ''}`}>
+    <section className={`page-hero ${compact ? "page-hero--compact" : ""}`}>
       <div className="page-hero__diagonal" aria-hidden="true">
         <span className="page-hero__circle" />
       </div>
