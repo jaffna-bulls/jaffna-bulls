@@ -8,7 +8,6 @@ export default function RugbyFixtures() {
       <PageHero
         eyebrow="Jaffna Bulls Rugby"
         title="Strength. Skill. Bull Nation."
-        description="The dedicated home for all Jaffna Bulls rugby content."
       >
         {/* <RugbySubnav /> */}
       </PageHero>
@@ -17,7 +16,7 @@ export default function RugbyFixtures() {
         <div className="container">
           <EmptyState
             title="Fixtures"
-            description="Official fixtures will be added once confirmed by the league"
+            description="Await for more information"
           />
         </div>
       </section>

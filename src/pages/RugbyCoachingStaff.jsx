@@ -1,17 +1,43 @@
 import PageHero from "../components/PageHero";
 import RugbySubnav from "../components/RugbySubnav";
 import "./rugbyCoachingStaff.css";
+import Asela from "../assets/Coaches/Asela.webp";
+import Ashane from "../assets/Coaches/Ashane.webp";
+import Ruklan from "../assets/Coaches/Ruklan.webp";
+import Tarinda from "../assets/Coaches/Tarinda.webp";
+import Vishva from "../assets/Coaches/Vishva.webp";
 
 const STAFF = [
-  { initials: "TR", name: "Tarinda Ratwatte", role: "Head of Rugby" },
-  { initials: "AD", name: "Asela Deshapriya", role: "Head Coach" },
-  { initials: "AD", name: "Ashane Dissanayake", role: "Assistant Coach" },
+  {
+    initials: "TR",
+    name: "Tarinda Ratwatte",
+    role: "Head of Rugby",
+    image: Tarinda,
+  },
+  {
+    initials: "AD",
+    name: "Asela Deshapriya",
+    role: "Head Coach",
+    image: Asela,
+  },
+  {
+    initials: "AD",
+    name: "Ashane Dissanayake",
+    role: "Assistant Coach",
+    image: Ashane,
+  },
   {
     initials: "VJ",
     name: "Vishva Jayasinghe",
     role: "Strength & Conditioning Coach",
+    image: Vishva,
   },
-  { initials: "RC", name: "Ruskhan Cabraal", role: "Team Manager" },
+  {
+    initials: "RC",
+    name: "Ruklan Cabraal",
+    role: "Team Manager",
+    image: Ruklan,
+  },
 ];
 
 export default function RugbyCoachingStaff() {
@@ -20,7 +46,6 @@ export default function RugbyCoachingStaff() {
       <PageHero
         eyebrow="Jaffna Bulls Rugby"
         title="Strength. Skill. Bull Nation."
-        description="The dedicated home for all Jaffna Bulls rugby content."
       >
         {/* <RugbySubnav /> */}
       </PageHero>
@@ -37,8 +62,9 @@ export default function RugbyCoachingStaff() {
           {STAFF.map((person) => (
             <article className="person-card" key={person.name}>
               <div className="person-card__avatar">
-                <span>{person.initials}</span>
+                <img src={person.image} alt={person.name} />
               </div>
+
               <div className="person-card__body">
                 <h3>{person.name}</h3>
                 <p>{person.role}</p>

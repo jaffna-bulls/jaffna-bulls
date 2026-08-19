@@ -22,16 +22,6 @@
   overflow: hidden;
 }
 
-.rugby-feature__watermark {
-  position: absolute;
-  top: 8%;
-  right: 8%;
-  font-family: var(--font-display);
-  font-size: 200px;
-  color: rgba(244, 241, 234, 0.06);
-  line-height: 1;
-}
-
 .rugby-feature__content {
   position: relative;
   z-index: 1;
@@ -115,13 +105,15 @@
   width: 210px;
   height: auto;
   display: block;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
   object-fit: contain;
 }
 
 .rugby-feature__content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  text-align: center;
 }
 
 .rugby-feature__content h2 {

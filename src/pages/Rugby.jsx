@@ -15,7 +15,6 @@ export default function Rugby() {
       <PageHero
         eyebrow="Jaffna Bulls Rugby"
         title="Strength. Skill. Bull Nation."
-        description="The dedicated home for all Jaffna Bulls rugby content."
       >
         {/* <RugbySubnav /> */}
       </PageHero>
@@ -23,8 +22,6 @@ export default function Rugby() {
       <section className="section rugby-overview">
         <div className="container rugby-overview__grid">
           <div className="rugby-feature">
-            <span className="rugby-feature__watermark">XV</span>
-
             <div className="rugby-feature__content">
               <img
                 src="/header-logo.png"

@@ -9,14 +9,13 @@ const NAV_LINKS = [
     to: "/rugby",
     label: "Rugby",
     children: [
-      { to: "/rugby", tag: "Rugby", title: "Home" },
-      { to: "/rugby/squad", tag: "Team", title: "Squad" },
+      { to: "/rugby/squad", tag: "01", title: "Squad" },
       {
         to: "/rugby/coaching-staff",
-        tag: "Leadership",
+        tag: "02",
         title: "Coaching Staff",
       },
-      { to: "/rugby/fixtures", tag: "Match Centre", title: "Fixtures" },
+      { to: "/rugby/fixtures", tag: "03", title: "Fixtures" },
     ],
   },
   { to: "/store", label: "Store" },

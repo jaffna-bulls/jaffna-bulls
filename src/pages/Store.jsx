@@ -1,51 +1,39 @@
-import { useState } from 'react';
-import PageHero from '../components/PageHero';
-import './store.css';
+import { useState } from "react";
+import PageHero from "../components/PageHero";
+import poloTshirt from "../assets/Tshirt/polo.webp";
+import "./store.css";
 
 const PRODUCTS = [
-  { id: 1, name: 'Featured Product', type: 'apparel', shape: 'shirt', color: 'bronze' },
-  { id: 2, name: 'Featured Product', type: 'apparel', shape: 'shirt', color: 'black' },
-  { id: 3, name: 'Featured Product', type: 'accessories', shape: 'cap', color: 'bronze' },
+  {
+    id: 1,
+    name: "Founder's Polo",
+    type: "apparel",
+    image: poloTshirt,
+    description:
+      "The official Jaffna Bulls Founder's Polo, designed for the Bull Nation.",
+  },
 ];
 
 const FILTERS = [
-  { key: 'all', label: 'All' },
-  { key: 'apparel', label: 'Apparel' },
-  { key: 'accessories', label: 'Accessories' },
+  { key: "all", label: "All" },
+  { key: "apparel", label: "Apparel" },
 ];
 
-function ProductIcon({ shape, color }) {
-  const fill = color === 'bronze' ? 'var(--color-bronze)' : 'var(--color-black)';
-  if (shape === 'cap') {
-    return (
-      <svg viewBox="0 0 120 90" width="96" height="72" aria-hidden="true">
-        <path
-          d="M10 80c0-30 22-55 50-55s50 25 50 55Z"
-          fill={fill}
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg viewBox="0 0 100 100" width="90" height="90" aria-hidden="true">
-      <path
-        d="M30 10 L15 25 L25 38 L32 32 V90 H68 V32 L75 38 L85 25 L70 10 C70 18 61 24 50 24 C39 24 30 18 30 10Z"
-        fill={fill}
-      />
-    </svg>
-  );
-}
+const SIZES = ["S", "M", "L", "XL", "2XL", "3XL", "4XL"];
 
 export default function Store() {
-  const [filter, setFilter] = useState('all');
-  const visible = filter === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.type === filter);
+  const [filter, setFilter] = useState("all");
+  const [showSizeChart, setShowSizeChart] = useState(false);
+
+  const visible =
+    filter === "all" ? PRODUCTS : PRODUCTS.filter((p) => p.type === filter);
 
   return (
     <>
       <PageHero
         eyebrow="Official Merchandise"
         title="Wear the Pride."
-        description="Support the Bull Nation with official Jaffna Bulls merchandise."
+        // description="Support the Bull Nation with official Jaffna Bulls merchandise."
       />
 
       <section className="section store-catalogue">
@@ -54,18 +42,25 @@ export default function Store() {
             <p className="eyebrow">Product Catalogue</p>
             <h2>Featured Products</h2>
           </div>
-          <div className="store-filters" role="tablist" aria-label="Filter products">
-            {FILTERS.map((f) => (
+
+          <div
+            className="store-filters"
+            role="tablist"
+            aria-label="Filter products"
+          >
+            {/* {FILTERS.map((f) => (
               <button
                 key={f.key}
                 role="tab"
                 aria-selected={filter === f.key}
-                className={`store-filters__btn ${filter === f.key ? 'is-active' : ''}`}
+                className={`store-filters__btn ${
+                  filter === f.key ? "is-active" : ""
+                }`}
                 onClick={() => setFilter(f.key)}
               >
                 {f.label}
               </button>
-            ))}
+            ))} */}
           </div>
         </div>
 
@@ -73,14 +68,36 @@ export default function Store() {
           {visible.map((product) => (
             <article className="product-card" key={product.id}>
               <div className="product-card__image">
-                <ProductIcon shape={product.shape} color={product.color} />
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="product-card__img"
+                />
               </div>
+
               <div className="product-card__body">
-                <span className="product-card__label">Details to be published</span>
+                <span className="product-card__label">
+                  Official Merchandise
+                </span>
+
                 <h3>{product.name}</h3>
-                <p>Product description, pricing, and sizing information will appear here.</p>
-                <button className="btn btn--outline-light btn--block" type="button">
-                  View Product
+
+                <p>{product.description}</p>
+
+                <button
+                  className="size-chart-trigger"
+                  type="button"
+                  onClick={() => setShowSizeChart(true)}
+                  aria-haspopup="dialog"
+                >
+                  Size Chart <span>+</span>
+                </button>
+
+                <button
+                  className="btn btn--outline-light btn--block"
+                  type="button"
+                >
+                  Add to cart
                 </button>
               </div>
             </article>
@@ -88,20 +105,62 @@ export default function Store() {
         </div>
       </section>
 
-      <section className="cta-banner">
+      {/* <section className="cta-banner">
         <div className="container cta-banner__inner">
           <div>
             <h2>Secure Online Shopping</h2>
             <p>
-              Shopping cart, online payment, order confirmation, and sizing information are
-              built into the store experience.
+              Shopping cart, online payment, order confirmation, and sizing
+              information are built into the store experience.
             </p>
           </div>
+
           <button className="btn btn--outline-dark" type="button">
             View Cart · 0
           </button>
         </div>
-      </section>
+      </section> */}
+
+      {/* Size Chart Popup */}
+      {showSizeChart && (
+        <div
+          className="size-chart-overlay"
+          role="presentation"
+          onClick={() => setShowSizeChart(false)}
+        >
+          <div
+            className="size-chart-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="size-chart-title"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="size-chart-close"
+              type="button"
+              onClick={() => setShowSizeChart(false)}
+              aria-label="Close size chart"
+            >
+              &times;
+            </button>
+
+            <p className="eyebrow">Founder's Polo</p>
+            <h2 id="size-chart-title">Size Chart</h2>
+
+            <div className="size-chart-grid">
+              {SIZES.map((size) => (
+                <div className="size-chart-item" key={size}>
+                  {size}
+                </div>
+              ))}
+            </div>
+
+            <p className="size-chart-note">
+              Available sizes: S, M, L, XL, 2XL, 3XL and 4XL.
+            </p>
+          </div>
+        </div>
+      )}
     </>
   );
 }

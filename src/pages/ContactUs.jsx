@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import PageHero from '../components/PageHero';
-import './contactUs.css';
+import { useState } from "react";
+import PageHero from "../components/PageHero";
+import "./contactUs.css";
 
 const INFO_CARDS = [
   {
-    title: 'General Enquiries',
-    text: 'Official email address, phone number, and registered address will be displayed once confirmed.',
+    title: "General Enquiries",
+    text: "Official email address, phone number, and registered address will be displayed once confirmed.",
   },
   {
-    title: 'Careers & Opportunities',
-    text: 'Interested in working with Jaffna Bulls? Use the contact form to enquire about current open roles within the franchise.',
+    title: "Careers & Opportunities",
+    text: "Interested in working with Jaffna Bulls? Use the contact form to enquire about current open roles within the franchise.",
   },
   {
-    title: 'Partners & Stakeholders',
-    text: 'Connect with our team to discuss partnership and stakeholder enquiries.',
+    title: "Partners & Stakeholders",
+    text: "Connect with our team to discuss partnership and stakeholder enquiries.",
   },
 ];
 
@@ -28,9 +28,9 @@ export default function ContactUs() {
   return (
     <>
       <PageHero
-        eyebrow="Connect With the Bull Nation"
+        eyebrow="Connect With Jaffna Bulls"
         title="Contact Us"
-        description="A simple, professional way for supporters, partners, and stakeholders to contact the franchise."
+        // description="A simple, professional way for supporters, partners, and stakeholders to contact the franchise."
       />
 
       <section className="section contact">
@@ -72,20 +72,20 @@ export default function ContactUs() {
 
             {submitted && (
               <p className="contact-form__success" role="status">
-                Thanks — your message has been noted. This is a demo form with no backend
-                connected yet.
+                Thanks — your message has been noted. This is a demo form with
+                no backend connected yet.
               </p>
             )}
           </form>
 
-          <div className="contact-info">
+          {/* <div className="contact-info">
             {INFO_CARDS.map((card) => (
               <div className="contact-info__card" key={card.title}>
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </>
