@@ -126,7 +126,6 @@ export default function Home() {
         <div className="container cta-banner__inner">
           <div>
             <h2>Wear the Pride.</h2>
-            <p>Explore official Jaffna Bulls merchandise</p>
           </div>
           <Link to="/store" className="btn btn--outline-dark">
             Visit the Store

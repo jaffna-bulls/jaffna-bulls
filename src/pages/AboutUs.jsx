@@ -77,9 +77,9 @@ export default function AboutUs() {
             <h3>Our Colours</h3>
             <p>
               Our roots run deep. Representing the North of Sri Lanka our
-              colours aim to inspired by the colours of the soil of the North.
-              Aiming to unite communities, develop talent and represent pride,
-              resilience and ambition of Northern Sri Lanka.
+              colours aim to be inspired by the colours of the soil of the
+              North. Aiming to unite communities, develop talent and represent
+              pride, resilience and ambition of Northern Sri Lanka.
             </p>
             <span className="mission-card__rule" />
             <h3>Our Identity</h3>

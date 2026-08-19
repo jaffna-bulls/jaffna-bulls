@@ -35,8 +35,36 @@ export default function Store() {
         title="Wear the Pride."
         // description="Support the Bull Nation with official Jaffna Bulls merchandise."
       />
+      //!
+      <section className="section store-coming-soon">
+        <div className="container">
+          <div className="store-coming-soon__card">
+            <span className="store-coming-soon__badge">
+              Official Merchandise
+            </span>
 
-      <section className="section store-catalogue">
+            <div className="store-coming-soon__icon">
+              <img src="/header-logo.png" alt="Jaffna Bulls merchandise" />
+            </div>
+
+            <p className="eyebrow">Jaffna Bulls Online Store</p>
+
+            <h2>Launching Soon.</h2>
+
+            <p className="store-coming-soon__text">
+              Our online store is coming soon. Stay tuned for official Jaffna
+              Bulls merchandise.
+            </p>
+
+            <div className="store-coming-soon__line">
+              <span></span>
+              <strong>Stay Tuned</strong>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section className="section store-catalogue">
         <div className="container store-catalogue__head">
           <div>
             <p className="eyebrow">Product Catalogue</p>
@@ -48,7 +76,7 @@ export default function Store() {
             role="tablist"
             aria-label="Filter products"
           >
-            {/* {FILTERS.map((f) => (
+            {FILTERS.map((f) => (
               <button
                 key={f.key}
                 role="tab"
@@ -60,7 +88,7 @@ export default function Store() {
               >
                 {f.label}
               </button>
-            ))} */}
+            ))}
           </div>
         </div>
 
@@ -103,8 +131,7 @@ export default function Store() {
             </article>
           ))}
         </div>
-      </section>
-
+      </section> */}
       {/* <section className="cta-banner">
         <div className="container cta-banner__inner">
           <div>
@@ -120,7 +147,6 @@ export default function Store() {
           </button>
         </div>
       </section> */}
-
       {/* Size Chart Popup */}
       {showSizeChart && (
         <div
