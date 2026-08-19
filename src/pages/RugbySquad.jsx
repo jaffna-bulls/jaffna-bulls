@@ -14,7 +14,7 @@ export default function RugbySquad() {
 
       <section className="section">
         <div className="container">
-          <EmptyState title="Squad" description="Await for more information" />
+          <EmptyState title="Squad" description="Await Draft Day" />
         </div>
       </section>
     </>
