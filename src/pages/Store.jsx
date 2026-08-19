@@ -150,7 +150,7 @@ export default function Store() {
             View Cart · 0
           </button>
         </div>
-      </section>
+      </section> */}
       
       {showSizeChart && (
         <div
@@ -190,7 +190,7 @@ export default function Store() {
             </p>
           </div>
         </div>
-      )} */}
+      )}
     </>
   );
 }
