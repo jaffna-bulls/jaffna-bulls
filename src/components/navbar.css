@@ -146,7 +146,9 @@
   width: 29px;
   height: 28px;
   color: rgba(244, 241, 234, 0.42);
-  transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+  transition:
+    color 0.2s var(--ease),
+    transform 0.2s var(--ease);
 }
 
 .navbar__theme-symbol svg {
