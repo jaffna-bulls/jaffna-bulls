@@ -38,3 +38,38 @@
     grid-template-columns: 1fr;
   }
 }
+.person-card {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.person-card__avatar {
+  width: 100%;
+  height: 360px;
+  background: #e8e1d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.person-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.person-card__body {
+  padding: 20px 22px 24px;
+}
+
+.person-card__body h3 {
+  margin: 0 0 6px;
+}
+
+.person-card__body p {
+  margin: 0;
+  color: var(--color-text-muted);
+}

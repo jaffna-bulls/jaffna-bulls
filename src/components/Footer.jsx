@@ -5,6 +5,7 @@ import "./footer.css";
 export default function Footer() {
   return (
     <footer className="footer">
+      {/* First row */}
       <div className="container footer__inner">
         <Link to="/" className="footer__brand">
           <img
@@ -18,23 +19,44 @@ export default function Footer() {
         <p className="footer__tagline">One Team. One Pride. One Bull Nation.</p>
 
         <div className="footer__social" aria-label="Social media">
-          <a href="#" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/jaffnabulls"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
             IG
           </a>
-          <a href="#" aria-label="Facebook">
-            FB
-          </a>
-          <a href="#" aria-label="YouTube">
-            YT
+
+          <a
+            href="https://www.tiktok.com/@jaffnabulls"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+          >
+            TT
           </a>
         </div>
       </div>
+
+      {/* Contact row */}
+      <div className="footer__contact-row">
+        <div className="container footer__contact-inner">
+          <p>
+            Have a question or want to connect?{" "}
+            <span>We'd love to hear from you.</span>
+          </p>
+
+          <a href="mailto:hello@jaffnabulls.com">hello@jaffnabulls.com </a>
+        </div>
+      </div>
+
+      {/* Copyright row */}
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <span>
             © {new Date().getFullYear()} Jaffna Bulls. All rights reserved.
           </span>
-          <span>Built for the Bull Nation.</span>
         </div>
       </div>
     </footer>

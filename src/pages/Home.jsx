@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
 import nawalokaPilingLogo from "../assets/Sponsors/nawaloka_piling.webp";
+import nawalokaPilingBlackLogo from "../assets/Sponsors/Nawaloka_piling_black.webp";
 import adviceLabLogo from "../assets/Sponsors/advicelab_logo.webp";
 import "./home.css";
 
@@ -25,8 +26,9 @@ const UPDATES = [
 const SPONSORS = [
   {
     name: "Nawaloka Piling",
-    logo: nawalokaPilingLogo,
+    logo: nawalokaPilingBlackLogo,
   },
+
   {
     name: "Advice Lab",
     logo: adviceLabLogo,
@@ -77,16 +79,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section updates">
+      {/* <section className="section updates">
         <div className="container updates__head">
           <div>
             <p className="eyebrow">From the Bull Nation</p>
             <h2>Latest Updates</h2>
           </div>
-          {/* <p className="updates__intro">
-            A dedicated hub for franchise news, rugby announcements, player
-            signings, and match-related updates.
-          </p> */}
         </div>
 
         <div className="container updates__grid">
@@ -98,7 +96,7 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className="section fixtures-teaser">
         <div className="container fixtures-teaser__head">
@@ -128,10 +126,7 @@ export default function Home() {
         <div className="container cta-banner__inner">
           <div>
             <h2>Wear the Pride.</h2>
-            <p>
-              Explore official Jaffna Bulls merchandise and show your support
-              for the Bull Nation.
-            </p>
+            <p>Explore official Jaffna Bulls merchandise</p>
           </div>
           <Link to="/store" className="btn btn--outline-dark">
             Visit the Store

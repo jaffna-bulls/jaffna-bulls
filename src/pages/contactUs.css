@@ -4,12 +4,15 @@
 
 .contact__grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 28px;
-  align-items: start;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
 .contact-form {
+  width: 100%;
+  max-width: 820px;
+  box-sizing: border-box;
+
   background: var(--color-white);
   border: 1px solid rgba(13, 13, 13, 0.08);
   padding: 48px;
@@ -56,7 +59,9 @@
   background: var(--color-cream);
   color: var(--color-text);
   resize: vertical;
-  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+  transition:
+    border-color 0.2s var(--ease),
+    background 0.2s var(--ease);
 }
 
 .contact-form__field input:focus,
@@ -97,9 +102,6 @@
 }
 
 @media (max-width: 900px) {
-  .contact__grid {
-    grid-template-columns: 1fr;
-  }
   .contact-form {
     padding: 32px 24px;
   }

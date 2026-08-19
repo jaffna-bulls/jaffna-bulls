@@ -49,14 +49,15 @@ export default function AboutUs() {
       <PageHero
         eyebrow="Who We Are"
         title="Built on Pride. Driven by Ambition."
-        description="A broader sporting franchise created to unite athletes, supporters, partners, and communities under one bold brand."
       />
 
       <section className="section story">
         <div className="container story__grid">
           <div>
             <p className="eyebrow">Our Story</p>
-            <h2>A Franchise for Northern Sri Lanka</h2>
+            <h2>
+              A Franchise for Northern <br /> Sri Lanka
+            </h2>
             <p className="story__text">
               Jaffna Bulls was formed with the ambition of building a powerful
               sporting franchise that represents pride, resilience, and
