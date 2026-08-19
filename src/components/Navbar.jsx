@@ -121,16 +121,8 @@ export default function Navbar({ theme, onToggleTheme }) {
             </span>
           </button>
 
-          <Link
-            to="/cart"
-            className="navbar__cart"
-            aria-label={`Cart with ${cartCount} items`}
-          >
-            <span className="navbar__cart-icon" aria-hidden="true">
-              &#128722;
-            </span>
-            <span>Cart</span>
-            <span className="navbar__cart-count">{cartCount}</span>
+          <Link to="/store" className="navbar__cart">
+            Shop Now
           </Link>
 
           <button
