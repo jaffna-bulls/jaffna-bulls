@@ -135,8 +135,8 @@ export default function Store() {
             </article>
           ))}
         </div>
-      </section> */}
-      {/* <section className="cta-banner">
+      </section>
+      <section className="cta-banner">
         <div className="container cta-banner__inner">
           <div>
             <h2>Secure Online Shopping</h2>
@@ -150,8 +150,8 @@ export default function Store() {
             View Cart · 0
           </button>
         </div>
-      </section> */}
-      {/* Size Chart Popup */}
+      </section>
+      
       {showSizeChart && (
         <div
           className="size-chart-overlay"
@@ -190,7 +190,7 @@ export default function Store() {
             </p>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }
