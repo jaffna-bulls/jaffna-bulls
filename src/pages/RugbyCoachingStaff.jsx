@@ -9,6 +9,7 @@ import Vishva from "../assets/Coaches/Vishva.webp";
 import Dinesh from "../assets/Coaches/Dinesh.webp";
 import Samod from "../assets/Coaches/Samod.webp";
 import Sankha from "../assets/Coaches/Sanka.webp";
+import Nimesh from "../assets/Coaches/Nimesh.webp";
 
 const STAFF = [
   {
@@ -52,6 +53,12 @@ const STAFF = [
     name: "Ruklan Cabraal",
     role: "Team Manager",
     image: Ruklan,
+  },
+  {
+    initials: "NK",
+    name: "Nimesh Kavishka",
+    role: "Physio",
+    image: Nimesh,
   },
   {
     initials: "SDS",
