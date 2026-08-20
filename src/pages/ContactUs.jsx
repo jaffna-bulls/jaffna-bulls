@@ -173,7 +173,7 @@ export default function ContactUs() {
 
             {status === "success" && (
               <p className="contact-form__success" role="status">
-                Thanks — your message has been sent. We'll get back to you soon.
+                Thanks your message has been sent. We'll get back to you soon.
               </p>
             )}
 
