@@ -104,7 +104,7 @@ export default function Navbar({ theme, onToggleTheme }) {
         </nav>
 
         <div className="navbar__actions">
-          <button
+          {/* <button
             className={`navbar__theme-toggle ${theme === "dark" ? "is-dark" : ""}`}
             type="button"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
@@ -121,7 +121,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                 <Moon />
               </span>
             </span>
-          </button>
+          </button> */}
 
           <Link to="/store" className="navbar__cart">
             Shop Now
