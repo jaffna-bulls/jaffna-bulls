@@ -14,7 +14,10 @@ export default function RugbyFixtures() {
 
       <section className="section">
         <div className="container">
-          <EmptyState title="Fixtures" description="Await Draft Day" />
+          <EmptyState
+            title="Fixtures"
+            description="Fixtures will be released soon!"
+          />
         </div>
       </section>
     </>

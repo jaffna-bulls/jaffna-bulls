@@ -3,6 +3,8 @@ import Logo from "../components/Logo";
 import nawalokaPilingLogo from "../assets/Sponsors/nawaloka_piling.webp";
 import nawalokaPilingBlackLogo from "../assets/Sponsors/Nawaloka_piling_black.webp";
 import adviceLabLogo from "../assets/Sponsors/advicelab_logo.webp";
+import adviceLabLogoWhite from "../assets/Sponsors/advicelab_logo_white.webp";
+
 import "./home.css";
 
 const UPDATES = [
@@ -26,16 +28,18 @@ const UPDATES = [
 const SPONSORS = [
   {
     name: "Nawaloka Piling",
-    logo: nawalokaPilingBlackLogo,
+    lightLogo: nawalokaPilingBlackLogo,
+    darkLogo: nawalokaPilingLogo,
   },
 
   {
     name: "Advice Lab",
-    logo: adviceLabLogo,
+    lightLogo: adviceLabLogo,
+    darkLogo: adviceLabLogoWhite,
   },
 ];
 
-export default function Home() {
+export default function Home({ theme }) {
   return (
     <>
       <section className="hero">
@@ -144,7 +148,10 @@ export default function Home() {
         <div className="container sponsors__logos">
           {SPONSORS.map((sponsor) => (
             <div className="sponsor-logo" key={sponsor.name}>
-              <img src={sponsor.logo} alt={sponsor.name} />
+              <img
+                src={theme === "dark" ? sponsor.darkLogo : sponsor.lightLogo}
+                alt={sponsor.name}
+              />
             </div>
           ))}
         </div>
