@@ -6,6 +6,9 @@ import Ashane from "../assets/Coaches/Ashane.webp";
 import Ruklan from "../assets/Coaches/Ruklan.webp";
 import Tarinda from "../assets/Coaches/Tarinda.webp";
 import Vishva from "../assets/Coaches/Vishva.webp";
+import Dinesh from "../assets/Coaches/Dinesh.webp";
+import Samod from "../assets/Coaches/Samod.webp";
+import Sankha from "../assets/Coaches/Sanka.webp";
 
 const STAFF = [
   {
@@ -27,16 +30,34 @@ const STAFF = [
     image: Ashane,
   },
   {
+    initials: "DS",
+    name: "Dinesh De Silva",
+    role: "Backs Coach",
+    image: Dinesh,
+  },
+  {
     initials: "VJ",
     name: "Vishva Jayasinghe",
     role: "Strength & Conditioning Coach",
     image: Vishva,
   },
   {
+    initials: "SM",
+    name: "Samod Madulanka",
+    role: "Assistant S&C Coach",
+    image: Samod,
+  },
+  {
     initials: "RC",
     name: "Ruklan Cabraal",
     role: "Team Manager",
     image: Ruklan,
+  },
+  {
+    initials: "SDS",
+    name: "Sankha De Silva",
+    role: "Masseur",
+    image: Sankha,
   },
 ];
 
