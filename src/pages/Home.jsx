@@ -39,7 +39,7 @@ const SPONSORS = [
   },
 ];
 
-export default function Home({ theme }) {
+export default function Home({ theme = "dark" }) {
   return (
     <>
       <section className="hero">

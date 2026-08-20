@@ -18,15 +18,21 @@ import NotFound from "./pages/NotFound";
 import { CartProvider } from "./context/CartContext";
 
 export default function App() {
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = window.localStorage.getItem("jaffna-bulls-theme");
-    return savedTheme === "dark" ? "dark" : "light";
-  });
+  // const [theme, setTheme] = useState(() => {
+  //   const savedTheme = window.localStorage.getItem("jaffna-bulls-theme");
+  //   return savedTheme === "dark" ? "dark" : "light";
+  // });
+
+  const [theme, setTheme] = useState('dark');
+
+  // useEffect(() => {
+  //   document.documentElement.dataset.theme = theme;
+  //   window.localStorage.setItem("jaffna-bulls-theme", theme);
+  // }, [theme]);
 
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    window.localStorage.setItem("jaffna-bulls-theme", theme);
-  }, [theme]);
+    document.documentElement.dataset.theme = "dark";
+  }, []);
 
   return (
     <CartProvider>
