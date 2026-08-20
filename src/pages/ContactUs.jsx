@@ -67,6 +67,8 @@ export default function ContactUs() {
   };
 
   const isSubmitting = status === "submitting";
+  const errorMessages = Object.values(fieldErrors).filter(Boolean);
+  const hasErrors = errorMessages.length > 0;
 
   return (
     <>
@@ -81,6 +83,19 @@ export default function ContactUs() {
             <p className="eyebrow">Send a Message</p>
             <h2>Get in Touch</h2>
 
+            {hasErrors && (
+              <div className="contact-form__error-summary" role="alert" id="form-errors">
+                <p className="contact-form__error-summary-title">
+                  Please fix the following:
+                </p>
+                <ul>
+                  {errorMessages.map((msg, idx) => (
+                    <li key={idx}>{msg}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="contact-form__row">
               <div className="contact-form__field">
                 <label htmlFor="name">Name</label>
@@ -91,15 +106,10 @@ export default function ContactUs() {
                   value={form.name}
                   onChange={handleChange}
                   aria-invalid={!!fieldErrors.name}
-                  aria-describedby={fieldErrors.name ? "name-error" : undefined}
+                  aria-describedby={fieldErrors.name ? "form-errors" : undefined}
                   disabled={isSubmitting}
                   required
                 />
-                {fieldErrors.name && (
-                  <p className="contact-form__error" id="name-error">
-                    {fieldErrors.name}
-                  </p>
-                )}
               </div>
               <div className="contact-form__field">
                 <label htmlFor="emailAddress">Email Address</label>
@@ -110,15 +120,10 @@ export default function ContactUs() {
                   value={form.emailAddress}
                   onChange={handleChange}
                   aria-invalid={!!fieldErrors.emailAddress}
-                  aria-describedby={fieldErrors.emailAddress ? "email-error" : undefined}
+                  aria-describedby={fieldErrors.emailAddress ? "form-errors" : undefined}
                   disabled={isSubmitting}
                   required
                 />
-                {fieldErrors.emailAddress && (
-                  <p className="contact-form__error" id="email-error">
-                    {fieldErrors.emailAddress}
-                  </p>
-                )}
               </div>
             </div>
 
@@ -156,15 +161,10 @@ export default function ContactUs() {
                 value={form.message}
                 onChange={handleChange}
                 aria-invalid={!!fieldErrors.message}
-                aria-describedby={fieldErrors.message ? "message-error" : undefined}
+                aria-describedby={fieldErrors.message ? "form-errors" : undefined}
                 disabled={isSubmitting}
                 required
               />
-              {fieldErrors.message && (
-                <p className="contact-form__error" id="message-error">
-                  {fieldErrors.message}
-                </p>
-              )}
             </div>
 
             <button className="btn btn--primary" type="submit" disabled={isSubmitting}>
@@ -173,7 +173,7 @@ export default function ContactUs() {
 
             {status === "success" && (
               <p className="contact-form__success" role="status">
-                Thanks — your message has been sent. We'll get back to you soon.
+                Thanks your message has been sent. We'll get back to you soon.
               </p>
             )}
 
