@@ -40,7 +40,7 @@ export default function App() {
         />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home theme={theme} />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/rugby" element={<Rugby />} />
             <Route path="/rugby/squad" element={<RugbySquad />} />
