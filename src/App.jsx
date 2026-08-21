@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import CartDrawer from "./components/CartDrawer";
 
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
@@ -18,17 +19,7 @@ import NotFound from "./pages/NotFound";
 import { CartProvider } from "./context/CartContext";
 
 export default function App() {
-  // const [theme, setTheme] = useState(() => {
-  //   const savedTheme = window.localStorage.getItem("jaffna-bulls-theme");
-  //   return savedTheme === "dark" ? "dark" : "light";
-  // });
-
-  const [theme, setTheme] = useState('dark');
-
-  // useEffect(() => {
-  //   document.documentElement.dataset.theme = theme;
-  //   window.localStorage.setItem("jaffna-bulls-theme", theme);
-  // }, [theme]);
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     document.documentElement.dataset.theme = "dark";
@@ -44,6 +35,7 @@ export default function App() {
             setTheme((current) => (current === "dark" ? "light" : "dark"))
           }
         />
+        <CartDrawer />
         <main>
           <Routes>
             <Route path="/" element={<Home theme={theme} />} />

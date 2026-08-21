@@ -186,7 +186,7 @@
   transform: translateX(28px);
 }
 
-.navbar__cart {
+.navbar__shop-btn {
   font-family: var(--font-nav);
   font-weight: 600;
   font-size: 13px;
@@ -194,35 +194,80 @@
   text-transform: uppercase;
   color: var(--color-black);
   background: var(--color-bronze);
-  padding: 12px 22px;
+  padding: 11px 20px;
   border-radius: 2px;
   transition:
     background 0.2s var(--ease),
     transform 0.2s var(--ease),
     box-shadow 0.2s var(--ease);
   box-shadow: 0 12px 22px -16px rgba(217, 121, 61, 0.8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.navbar__cart:hover {
+.navbar__shop-btn:hover {
   background: var(--color-brown-light);
   transform: translateY(-2px);
 }
 
-.navbar__cart-icon {
-  font-size: 16px;
-  line-height: 1;
-}
-
-.navbar__cart-count {
-  min-width: 18px;
-  height: 18px;
+.navbar__cart-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: var(--color-black);
+  background: rgba(244, 241, 234, 0.06);
+  border: 1px solid rgba(244, 241, 234, 0.18);
+  color: #f4f1ea;
+  padding: 0;
+  transition:
+    border-color 0.2s var(--ease),
+    background 0.2s var(--ease),
+    transform 0.2s var(--ease),
+    color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+}
+
+.navbar__cart-btn:hover,
+.navbar__cart-btn.has-items {
+  border-color: var(--color-bronze);
   color: var(--color-bronze);
-  font-size: 10px;
+}
+
+.navbar__cart-btn:hover {
+  background: rgba(217, 121, 61, 0.15);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 18px -8px rgba(217, 121, 61, 0.8);
+}
+
+.navbar__cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 10px;
+  background: var(--color-bronze);
+  color: var(--color-black);
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #0d0d0d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  animation: badgePop 0.3s var(--ease);
+}
+
+@keyframes badgePop {
+  0% { transform: scale(0.4); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 .navbar__toggle {
@@ -291,8 +336,8 @@
     width: 100%;
   }
 
-  .navbar__cart {
-    padding: 10px 16px;
+  .navbar__shop-btn {
+    padding: 9px 14px;
     font-size: 12px;
   }
 

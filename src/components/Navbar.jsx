@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import "./navbar.css";
 
@@ -27,7 +27,7 @@ const NAV_LINKS = [
 export default function Navbar({ theme, onToggleTheme }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { cartCount } = useCart();
+  const { cartCount, openCart } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -86,9 +86,6 @@ export default function Navbar({ theme, onToggleTheme }) {
                       <NavLink
                         key={child.to}
                         to={child.to}
-                        // This is important for /rugby.
-                        // Without `end`, /rugby would also match
-                        // /rugby/squad, /rugby/fixtures, etc.
                         end
                         onClick={() => setOpen(false)}
                       >
@@ -104,28 +101,29 @@ export default function Navbar({ theme, onToggleTheme }) {
         </nav>
 
         <div className="navbar__actions">
-          {/* <button
-            className={`navbar__theme-toggle ${theme === "dark" ? "is-dark" : ""}`}
-            type="button"
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-            title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-            aria-pressed={theme === "dark"}
-            onClick={onToggleTheme}
+          <Link
+            to="/store"
+            className="navbar__shop-btn"
+            onClick={() => setOpen(false)}
           >
-            <span className="navbar__theme-rail" aria-hidden="true">
-              <span className="navbar__theme-indicator" />
-              <span className="navbar__theme-symbol navbar__theme-symbol--sun">
-                <Sun />
-              </span>
-              <span className="navbar__theme-symbol navbar__theme-symbol--moon">
-                <Moon />
-              </span>
-            </span>
-          </button> */}
-
-          <Link to="/store" className="navbar__cart">
             Shop Now
           </Link>
+
+          {/* Dedicated Cart Icon Button */}
+          <button
+            className={`navbar__cart-btn ${cartCount > 0 ? "has-items" : ""}`}
+            type="button"
+            onClick={openCart}
+            aria-label={`Shopping cart with ${cartCount} items`}
+            title="Shopping Cart"
+          >
+            <ShoppingBag size={20} />
+            {cartCount > 0 && (
+              <span className="navbar__cart-badge" key={cartCount}>
+                {cartCount}
+              </span>
+            )}
+          </button>
 
           <button
             className={`navbar__toggle ${open ? "is-open" : ""}`}
@@ -142,3 +140,4 @@ export default function Navbar({ theme, onToggleTheme }) {
     </header>
   );
 }
+

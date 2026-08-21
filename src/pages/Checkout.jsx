@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import { useCart } from "../context/CartContext";
 import { createOrder } from "../services/orderService";
@@ -14,6 +14,9 @@ const BANK_DETAILS = [
 ];
 
 export default function Checkout() {
+  const location = useLocation();
+  const prefilled = location.state?.customer || {};
+
   const { cartItems, cartTotal } = useCart();
   const [file, setFile] = useState(null);
   const [pdfUrl, setPdfUrl] = useState(null);
@@ -150,17 +153,75 @@ export default function Checkout() {
             <form className="checkout-form" onSubmit={handleSubmit}>
               <p className="eyebrow">Delivery details</p>
               <h2>Customer information</h2>
-              <label>Customer name<input name="customerName" required /></label>
-              <label>Email<input name="email" type="email" required /></label>
-              <label>Phone<input name="phone" type="tel" required /></label>
-              <label>Street<input name="street" defaultValue="123 Main St" required /></label>
+              <label>
+                Customer name
+                <input
+                  name="customerName"
+                  defaultValue={prefilled.name || ""}
+                  required
+                />
+              </label>
+              <label>
+                Email
+                <input
+                  name="email"
+                  type="email"
+                  defaultValue={prefilled.email || ""}
+                  required
+                />
+              </label>
+              <label>
+                Phone
+                <input
+                  name="phone"
+                  type="tel"
+                  defaultValue={prefilled.phone || ""}
+                  required
+                />
+              </label>
+              <label>
+                Street
+                <input
+                  name="street"
+                  defaultValue={prefilled.address || "123 Main St"}
+                  required
+                />
+              </label>
               <div className="checkout-form__row">
-                <label>City<input name="city" defaultValue="Colombo" required /></label>
-                <label>State<input name="state" defaultValue="Western" required /></label>
+                <label>
+                  City
+                  <input
+                    name="city"
+                    defaultValue={prefilled.city || "Colombo"}
+                    required
+                  />
+                </label>
+                <label>
+                  State
+                  <input
+                    name="state"
+                    defaultValue={prefilled.state || "Western"}
+                    required
+                  />
+                </label>
               </div>
               <div className="checkout-form__row">
-                <label>Postal code<input name="postalCode" defaultValue="00700" required /></label>
-                <label>Country<input name="country" defaultValue="Sri Lanka" required /></label>
+                <label>
+                  Postal code
+                  <input
+                    name="postalCode"
+                    defaultValue={prefilled.postalCode || "00700"}
+                    required
+                  />
+                </label>
+                <label>
+                  Country
+                  <input
+                    name="country"
+                    defaultValue={prefilled.country || "Sri Lanka"}
+                    required
+                  />
+                </label>
               </div>
               <label>
                 Payment proof
