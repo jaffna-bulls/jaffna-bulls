@@ -1,29 +1,13 @@
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
+import NEWS from "../data/newsData";
 import nawalokaPilingLogo from "../assets/Sponsors/nawaloka_piling.webp";
 import nawalokaPilingBlackLogo from "../assets/Sponsors/Nawaloka_piling_black.webp";
 import adviceLabLogo from "../assets/Sponsors/advicelab_logo.webp";
 import adviceLabLogoWhite from "../assets/Sponsors/advicelab_logo_white.webp";
+import mosguardLogo from "../assets/Sponsors/mosguard.webp";
 
 import "./home.css";
-
-const UPDATES = [
-  {
-    tag: "Franchise News",
-    title: "Building a Bold New Sporting Legacy",
-    text: "Follow the latest announcements from Jaffna Bulls as the franchise begins its journey.",
-  },
-  {
-    tag: "Rugby",
-    title: "Rugby Programme Takes Centre Stage",
-    text: "Team and player updates will be published as official details are confirmed.",
-  },
-  {
-    tag: "Community",
-    title: "One Powerful Identity",
-    text: "Connecting athletes, supporters, partners, and communities across the region.",
-  },
-];
 
 const SPONSORS = [
   {
@@ -36,6 +20,14 @@ const SPONSORS = [
     name: "Advice Lab",
     lightLogo: adviceLabLogo,
     darkLogo: adviceLabLogoWhite,
+  },
+];
+
+const CO_LEAD_SPONSORS = [
+  {
+    name: "Mosguard",
+    lightLogo: mosguardLogo,
+    darkLogo: mosguardLogo,
   },
 ];
 
@@ -83,7 +75,7 @@ export default function Home({ theme = "dark" }) {
         </div>
       </section>
 
-      {/* <section className="section updates">
+      <section className="section updates" id="updates">
         <div className="container updates__head">
           <div>
             <p className="eyebrow">From the Bull Nation</p>
@@ -92,15 +84,22 @@ export default function Home({ theme = "dark" }) {
         </div>
 
         <div className="container updates__grid">
-          {UPDATES.map((item) => (
-            <article className="update-card" key={item.title}>
+          {NEWS.map((item) => (
+            <Link
+              to={`/news/${item.slug}`}
+              className="update-card"
+              key={item.slug}
+            >
               <span className="update-card__tag">{item.tag}</span>
               <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
+              <p>{item.subtitle}</p>
+              <span className="update-card__link">
+                Read full update <span aria-hidden="true">↗</span>
+              </span>
+            </Link>
           ))}
         </div>
-      </section> */}
+      </section>
 
       <section className="section fixtures-teaser">
         <div className="container fixtures-teaser__head">
@@ -146,14 +145,37 @@ export default function Home({ theme = "dark" }) {
         </div>
 
         <div className="container sponsors__logos">
-          {SPONSORS.map((sponsor) => (
-            <div className="sponsor-logo" key={sponsor.name}>
-              <img
-                src={theme === "dark" ? sponsor.darkLogo : sponsor.lightLogo}
-                alt={sponsor.name}
-              />
+          <div className="sponsors__group">
+            <h3>Principal Sponsors</h3>
+            <div className="sponsors__group-logos">
+              {SPONSORS.map((sponsor) => (
+                <div className="sponsor-logo" key={sponsor.name}>
+                  <img
+                    src={
+                      theme === "dark" ? sponsor.darkLogo : sponsor.lightLogo
+                    }
+                    alt={sponsor.name}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div className="sponsors__group">
+            <h3>Co-Lead Sponsor</h3>
+            <div className="sponsors__group-logos">
+              {CO_LEAD_SPONSORS.map((sponsor) => (
+                <div className="sponsor-logo" key={sponsor.name}>
+                  <img
+                    src={
+                      theme === "dark" ? sponsor.darkLogo : sponsor.lightLogo
+                    }
+                    alt={sponsor.name}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>
