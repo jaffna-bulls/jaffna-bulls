@@ -14,6 +14,7 @@ import Store from "./pages/Store";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import ContactUs from "./pages/ContactUs";
+import NewsArticle from "./pages/NewsArticle";
 import NotFound from "./pages/NotFound";
 import { CartProvider } from "./context/CartContext";
 
@@ -23,7 +24,7 @@ export default function App() {
   //   return savedTheme === "dark" ? "dark" : "light";
   // });
 
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState("dark");
 
   // useEffect(() => {
   //   document.documentElement.dataset.theme = theme;
@@ -59,6 +60,7 @@ export default function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/news/:slug" element={<NewsArticle />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
