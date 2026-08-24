@@ -4,10 +4,11 @@ const NEWS = [
     slug: "mosgard-announced-as-official-co-lead-sponsor",
     tag: "Jaffna Bulls News",
     date: "August 24, 2026",
-    title:
-      "MosGard named Official Co-Lead Sponsor of Jaffna Bulls Rugby for the 2026 Next XV Season",
-    // subtitle:
-    //   "Franchise confirms its leadership team ahead of the inaugural 2026 campaign",
+    title: "MosGard joins the Jaffna Bulls as Official Co-Lead Sponsor",
+    subtitle:
+      "A new partnership built around ambition, performance, and community impact.",
+    fullTitle:
+      "MosGard Announced as Official Co-Lead Sponsor of Jaffna Bulls Rugby for the 2026 Next XV Rugby League Season",
     images: [],
     hashtags: [
       "BullNation",
