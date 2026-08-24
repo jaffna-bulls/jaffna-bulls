@@ -1,4 +1,82 @@
 const NEWS = [
+  // 2
+  {
+    slug: "mosgard-announced-as-official-co-lead-sponsor",
+    tag: "Jaffna Bulls News",
+    date: "August 24, 2026",
+    title:
+      "MosGard named Official Co-Lead Sponsor of Jaffna Bulls Rugby for the 2026 Next XV Season",
+    // subtitle:
+    //   "Franchise confirms its leadership team ahead of the inaugural 2026 campaign",
+    images: [],
+    hashtags: [
+      "BullNation",
+      "JaffnaBulls",
+      "NextXV2026",
+      "MosGard",
+      "NorthernPride",
+    ],
+
+    blocks: [
+      {
+        type: "paragraph",
+        text: "Jaffna Bulls Rugby is proud to announce MosGard as an Official Co-Lead Sponsor for the highly anticipated 2026 Next XV Rugby League season, marking the beginning of an exciting partnership that unites two ambitious brands with a shared commitment to excellence, performance, and community impact.",
+      },
+      {
+        type: "paragraph",
+        text: "The sponsorship agreement, secured through Star Holdings (Private) Limited under its MosGard brand, represents a significant milestone in the continued growth of the Jaffna Bulls franchise as the club prepares for its inaugural campaign in the Next XV Rugby League. Under the agreement, MosGard will serve as a Co-Lead Sponsor for the 2026 season.",
+      },
+      {
+        type: "paragraph",
+        text: "MosGard's support will play a key role in strengthening the Bulls' preparations both on and off the field as the franchise builds towards a competitive debut season. The partnership also creates opportunities for brand integration, fan engagement initiatives, and community-focused activities throughout the year.",
+      },
+      {
+        type: "quote",
+        text: "“We are delighted to welcome MosGard to the Bulls family as an Official Co-Lead Sponsor. As we prepare for our first season in the Next XV Rugby League, it is important that we align ourselves with forward-thinking brands that share our vision for growth, innovation, and excellence. MosGard’s support demonstrates belief in our journey and ambition, and we look forward to building a successful partnership together.”",
+        cite: "Prad Navaratnam, Co-Owner of Jaffna Bulls",
+      },
+      {
+        type: "paragraph",
+        text: "Sulaiman Siraj, Chief Operating Officer of Star Holdings, expressed enthusiasm about joining the Bulls at such a pivotal moment in the club’s journey.",
+      },
+      {
+        type: "person-story",
+        // label: "A shared ambition",
+        // name: "Prad Navaratnam",
+        // role: "Co-Owner, Jaffna Bulls",
+        text: "We’re proud to support initiatives that bring communities together through sport. We’re excited to partner with the Bulls and be part of this season.”",
+      },
+      {
+        type: "paragraph",
+        text: "The Jaffna Bulls franchise was established with a vision of creating a world-class sports organisation that celebrates Northern Sri Lanka while developing talent, inspiring communities, and competing at the highest levels of sport. The club’s entry into the Next XV Rugby League marks a significant step towards achieving those ambitions.",
+      },
+      {
+        type: "paragraph",
+        text: "The partnership with MosGard further strengthens the Bulls’ commercial platform ahead of the 2026 season and reflects the growing momentum surrounding the franchise as it prepares to compete against some of the strongest rugby organisations in the region.",
+      },
+      {
+        type: "paragraph",
+        text: "As anticipation continues to build towards kickoff, the Jaffna Bulls welcome MosGard to the #BullNation and look forward to achieving great things together during the 2026 Next XV Rugby League season.",
+      },
+      {
+        type: "heading",
+        text: "About Jaffna Bulls",
+      },
+      {
+        type: "paragraph",
+        text: "Jaffna Bulls is a multi-sport franchise representing the spirit, resilience, and ambition of Northern Sri Lanka. The franchise will make its rugby debut in the 2026 Next XV Rugby League and is committed to building excellence on the field while creating meaningful impact within the communities it represents.",
+      },
+      {
+        type: "heading",
+        text: "About MosGard",
+      },
+      {
+        type: "paragraph",
+        text: "MosGard is a natural mosquito incense stick made with citronella extract, designed to help keep mosquitoes away for up to 10 hours with a single use. Known for its calming fragrance and effective protection, it has rapidly become a household staple in Sri Lanka and is suitable for both indoor and outdoor spaces.",
+      },
+      //
+    ],
+  },
   {
     slug: "officially-join-the-next-xv",
     tag: "Jaffna Bulls News",
@@ -7,6 +85,7 @@ const NEWS = [
     subtitle:
       "Franchise confirms its leadership team ahead of the inaugural 2026 campaign",
     images: [],
+    hashtags: ["JaffnaBulls", "NorthernPride", "NextXV2026", "BullNation"],
     competitionAtAGlance: {
       eyebrow: "The Next XV",
       title: "2026 Competition at a Glance",
