@@ -2,6 +2,8 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { getNewsBySlug } from "../data/newsData";
 import NewsImage from "../components/NewsImage";
+import NewsHashtags from "../components/NewsHashtags";
+import NewsPersonStory from "../components/NewsPersonStory";
 import NewsQuote from "../components/NewsQuote";
 import NewsTitle from "../components/NewsTitle";
 import NotFound from "./NotFound";
@@ -91,6 +93,12 @@ export default function NewsArticle() {
                 return <NewsQuote key={`${block.text}-${index}`} {...block} />;
               }
 
+              if (block.type === "person-story") {
+                return (
+                  <NewsPersonStory key={`${block.name}-${index}`} {...block} />
+                );
+              }
+
               const content = block.parts
                 ? block.parts.map((part, partIndex) =>
                     typeof part === "string" ? (
@@ -115,6 +123,7 @@ export default function NewsArticle() {
               );
             })}
           </div>
+          <NewsHashtags hashtags={article.hashtags} />
           <div className="news-article__footer">
             <span>Jaffna Bulls</span>
             <Link to="/contact-us">
