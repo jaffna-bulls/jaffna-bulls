@@ -1,4 +1,158 @@
 const NEWS = [
+  // 3
+  {
+    slug: "jaffna-bulls-reveal-2026-coaching-team",
+    tag: "Jaffna Bulls News",
+    date: "August 25, 2026",
+    title: "Jaffna Bulls Reveal 2026 Coaching Team",
+    subtitle:
+      "New coaching and performance team brings fresh ambition to the season",
+    fullTitle:
+      "Jaffna Bulls Announce Coaching and High-Performance Team for 2026 Season",
+    fullSubtitle:
+      "The Jaffna Bulls are pleased to officially announce the appointment of the franchise’s coaching and high-performance team for the 2026 rugby season.",
+    images: [],
+    hashtags: [
+      "JaffnaBulls",
+      "NextXV2026",
+      "NorthernPride",
+      "BullsOnTheRise",
+      "NewBeginnings",
+      "NewLeadership",
+      "StrongerTogether",
+    ],
+
+    blocks: [
+      {
+        type: "paragraph",
+        text: "The newly appointed team brings together extensive experience across international, national, club, school and representative rugby. The group will be responsible for preparing the Bulls both technically and physically as the franchise builds towards its inaugural Next XV Rugby League campaign.",
+      },
+      {
+        type: "heading",
+        text: "Asela Deshapriya Appointed Head Coach",
+      },
+      {
+        type: "paragraph",
+        text: "Asela Deshapriya will lead the Jaffna Bulls as Head Coach.",
+      },
+      {
+        type: "paragraph",
+        text: "A highly experienced rugby coach, Asela has held head coaching positions with the Sri Lanka Air Force Sports Club, D.S. Senanayake College First XV, the Sri Lanka National Women’s Sevens Team in 2025 and the Western Province Sevens team. He has also served as Assistant Coach of the Sri Lanka Under-18 Girls’ Sevens team.",
+      },
+      {
+        type: "paragraph",
+        text: "His qualifications include World Rugby Level 3 coaching in 15-a-side rugby, World Rugby Level 2 coaching in Sevens, World Rugby Strength and Conditioning Level 1, and high-performance training across both Sevens and 15-a-side rugby. His playing career included representing C.W.W. Kannangara College First XV and Petersen’s Sports Club.",
+      },
+      {
+        type: "heading",
+        text: "Ashane Dassanayake Appointed Assistant Coach",
+      },
+      {
+        type: "paragraph",
+        text: "Ashane Dassanayake joins the Bulls as Assistant Coach, bringing significant experience in forwards coaching and player development.",
+      },
+      {
+        type: "paragraph",
+        text: "His coaching background includes serving as Assistant Coach of the Sri Lanka National Under-20 15s team for the 2026 World Cup Qualifiers, Assistant Coach of D.S. Senanayake College First XV from 2024 to 2026, and Head Coach of the Sri Lanka Army Signal Regiment, which finished as unbeaten champions in 2023. He has also coached within the school and mercantile rugby systems.",
+      },
+      {
+        type: "paragraph",
+        text: "Ashane holds World Rugby Level 2 coaching qualifications in both 15-a-side rugby and Sevens, World Rugby Strength and Conditioning Level 1, and a qualification in high-performance Sevens rugby. As a player, he represented the Sri Lanka National Under-20 team and was a member of Royal College’s unbeaten First XV league-winning team in 2009.",
+      },
+      {
+        type: "heading",
+        text: "Dinesh De Silva Appointed Backs Coach",
+      },
+      {
+        type: "paragraph",
+        text: "Dinesh De Silva has been appointed Backs Coach and will focus on developing the Bulls’ attacking structure, backline execution and technical skills.",
+      },
+      {
+        type: "paragraph",
+        text: "His coaching experience includes serving as Backs Coach of D.S. Senanayake College First XV from 2024 to 2026, Skills Development Coach at D.S. Senanayake College in 2023 and Head Coach of the Sri Lanka Army Armoured Corps in 2026. He has also served as Head Coach and Consultant at Lalith Athulathmudali College, Mount Lavinia.",
+      },
+      {
+        type: "paragraph",
+        text: "As a player, Dinesh represented the Sri Lanka National 15s team in 2025 and the Sri Lanka National Under-20 team. He is a current CR & FC player and brings 13 years of A Division domestic rugby experience to the Bulls.",
+      },
+
+      {
+        type: "heading",
+        text: "Vishva Jayasinghe Appointed Strength and Conditioning Coach",
+      },
+      {
+        type: "paragraph",
+        text: "The Bulls’ physical preparation programme will be led by Strength and Conditioning Coach Vishva Jayasinghe.",
+      },
+      {
+        type: "paragraph",
+        text: "His experience includes serving as Strength and Conditioning Coach for the Sri Lanka National 15s team’s 2026 New Zealand tour and the Sri Lanka Under-20 15s team during the 2026 World Cup Qualifiers. He has also worked with CR & FC, St. Thomas’ College, Isipathana College, Royal College, Link Natural and John Keells Holdings.",
+      },
+      {
+        type: "paragraph",
+        text: "Vishva holds World Rugby Strength and Conditioning Level 1 and Australian Strength and Conditioning Association Level 1 qualifications. His playing career includes representing Sri Lanka in both Sevens and 15-a-side rugby between 2010 and 2016, alongside extensive A Division club experience with CR & FC, Navy, Upcountry Lions and Kandy Sports Club.",
+      },
+      {
+        type: "heading",
+        text: "Samodh Madulanka Appointed Assistant Strength and Conditioning Coach",
+      },
+      {
+        type: "paragraph",
+        text: "Samodh Madulanka will support the Bulls’ physical performance programme as Assistant Strength and Conditioning Coach.",
+      },
+      {
+        type: "paragraph",
+        text: "He has previously worked as Assistant Strength and Conditioning Coach for D.S. Senanayake College Rugby and as a Performance Trainer at Tass Sports Science Centre. He holds an Advanced Diploma in Sports Science and Management.",
+      },
+      {
+        type: "paragraph",
+        text: "His playing background includes representing D.S. Senanayake College First XV, Air Force Sports Club, the Southern Province and the Brandix Sevens team.",
+      },
+      {
+        type: "heading",
+        text: "Nimesh De Silva Appointed Team Physiotherapist",
+      },
+      {
+        type: "paragraph",
+        text: "Nimesh De Silva has been appointed Team Physiotherapist and will oversee the treatment, rehabilitation and physical wellbeing of the Bulls’ playing group.",
+      },
+      {
+        type: "paragraph",
+        text: "His rugby physiotherapy experience includes appointments with the Sri Lanka National Women’s Sevens team in 2026 and the Sri Lanka Under-15 Development Squad in 2025. He has also served as Chief Physiotherapist for Royal College First XV, Zahira College First XV and St. Thomas’ College First XV.",
+      },
+      {
+        type: "paragraph",
+        text: "Nimesh has additionally worked with the Sri Lanka Air Force, Hayleys, Hela Apparel and Ceylon Sports Therapy.",
+      },
+      {
+        type: "heading",
+        text: "Sanka De Silva and Ruklan Cabral Complete the Team",
+      },
+      {
+        type: "paragraph",
+        text: "The Jaffna Bulls have also appointed Sanka De Silva as Massage Therapist and Ruklan Cabral as Team Manager, completing the franchise’s coaching, medical and team-management structure for the season.",
+      },
+
+      {
+        type: "heading",
+        text: "Building a Strong Foundation for the Bulls",
+      },
+      {
+        type: "paragraph",
+        text: "The appointments reflect the Jaffna Bulls’ commitment to creating a professional and well-rounded rugby programme, with specialist support across coaching, skills development, physical preparation, rehabilitation, player welfare and team operations.",
+      },
+      {
+        type: "paragraph",
+        text: "The Bulls’ coaching team will work collaboratively to establish a strong playing identity, develop a competitive squad and ensure that every player is prepared to represent the franchise and the Jaffna community with pride.",
+      },
+      {
+        type: "paragraph",
+        text: "The Jaffna Bulls look forward to welcoming the entire coaching and performance team to the franchise as preparations continue for the 2026 season.",
+      },
+
+      //
+    ],
+  },
   // 2
   {
     slug: "mosgard-announced-as-official-co-lead-sponsor",
