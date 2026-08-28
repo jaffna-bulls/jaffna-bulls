@@ -81,10 +81,13 @@ export default function Home({ theme = "dark" }) {
             <p className="eyebrow">From the Bull Nation</p>
             <h2>Latest Updates</h2>
           </div>
+          <Link to="/latest-updates" className="btn btn--outline-dark">
+            View all updates
+          </Link>
         </div>
 
         <div className="container updates__grid">
-          {NEWS.map((item) => (
+          {NEWS.slice(0, 3).map((item) => (
             <Link
               to={`/news/${item.slug}`}
               className="update-card"

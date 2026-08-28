@@ -15,6 +15,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import ContactUs from "./pages/ContactUs";
 import NewsArticle from "./pages/NewsArticle";
+import LatestUpdates from "./pages/LatestUpdates";
 import NotFound from "./pages/NotFound";
 import { CartProvider } from "./context/CartContext";
 
@@ -60,6 +61,7 @@ export default function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/latest-updates" element={<LatestUpdates />} />
             <Route path="/news/:slug" element={<NewsArticle />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
