@@ -1,5 +1,66 @@
 const NEWS = [
   // 3
+
+  {
+    slug: "gordone-as-official-kit-partner",
+    tag: "Jaffna Bulls News",
+    date: "August 28, 2026",
+    title: "Gordone Becomes Jaffna Bulls’ Kit Partner",
+    subtitle:
+      "The partnership will provide Jaffna Bulls with official playing and training kits",
+    fullTitle:
+      "Jaffna Bulls Announce Gordone as Official Kit Partner for the 2026 Next XV Rugby League Season",
+    fullSubtitle:
+      "Gordone will provide the Jaffna Bulls Rugby playing and training kits for the 2026 season.",
+    images: [],
+    hashtags: [
+      "BullNation",
+      "JaffnaBulls",
+      "NextXV2026",
+      "OfficialKitPartner ",
+      "SportsPartnership",
+    ],
+
+    blocks: [
+      {
+        type: "heading",
+        text: "The Jaffna Bulls are proud to announce Gordone as the franchise’s Official Kit Partner for the 2026 Next XV Rugby League season",
+      },
+      {
+        type: "paragraph",
+        text: "Under the partnership, Gordone will be the official provider of the Jaffna Bulls Rugby playing and training kits, supplying the team with apparel for match-day performance and its preparation throughout the season.",
+      },
+      {
+        type: "paragraph",
+        text: "The partnership marks another important step in the Jaffna Bulls’ preparations for their inaugural Next XV Rugby League campaign. It brings together the Bulls’ ambition to build a professional, high-performance sporting environment with Gordone’s focus on quality sportswear.",
+      },
+
+      {
+        type: "quote",
+        text: "“We are delighted to welcome Gordone as the Official Kit Partner of Jaffna Bulls Rugby. Our playing and training kits are central to how the team performs and presents itself, and we look forward to working with Gordone as we prepare for the 2026 season.”",
+        cite: "Prad Navaratnam, Co-Owner of Jaffna Bulls",
+      },
+      {
+        type: "paragraph",
+        text: "The official playing and training kits will be unveiled ahead of the 2026 Next XV Rugby League season and will reflect the identity, culture and ambition of the Jaffna Bulls franchise.",
+      },
+      {
+        type: "paragraph",
+        text: "The Jaffna Bulls continue to strengthen their commercial and operational foundations ahead of the season, with further partnership and team announcements to follow.",
+      },
+
+      {
+        type: "heading",
+        text: "ABOUT JAFFNA BULLS",
+      },
+      {
+        type: "paragraph",
+        text: "Jaffna Bulls is a multi-sport franchise committed to developing sporting talent, inspiring communities and creating a platform for excellence on and off the field. Rugby is the franchise’s inaugural sport, with Jaffna Bulls Rugby set to compete in the 2026 Next XV Rugby League season.",
+      },
+      //
+    ],
+  },
+  //3
   {
     slug: "jaffna-bulls-reveal-2026-coaching-team",
     tag: "Jaffna Bulls News",
