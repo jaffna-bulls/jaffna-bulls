@@ -9,7 +9,7 @@ const NEWS = [
     subtitle:
       "The partnership will provide Jaffna Bulls with official playing and training kits",
     fullTitle:
-      "The partnership will provide Jaffna Bulls with official playing and training kits.",
+      "Jaffna Bulls Announce Gordone as Official Kit Partner for the 2026 Next XV Rugby League Season",
     fullSubtitle:
       "Gordone will provide the Jaffna Bulls Rugby playing and training kits for the 2026 season.",
     images: [],
