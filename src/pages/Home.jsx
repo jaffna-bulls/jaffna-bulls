@@ -6,7 +6,11 @@ import nawalokaPilingBlackLogo from "../assets/Sponsors/Nawaloka_piling_black.we
 import adviceLabLogo from "../assets/Sponsors/advicelab_logo.webp";
 import adviceLabLogoWhite from "../assets/Sponsors/advicelab_logo_white.webp";
 import mosguardLogo from "../assets/Sponsors/mosguard.webp";
-
+import sozoLogo from "../assets/Sponsors/sozo.webp";
+import gordone from "../assets/Sponsors/partner_Gordone.webp";
+import onyx from "../assets/Sponsors/partner_Onyx.webp";
+import pw from "../assets/Sponsors/partner_PW.webp";
+import rwr from "../assets/Sponsors/partner_RwR.webp";
 import "./home.css";
 
 const SPONSORS = [
@@ -23,11 +27,39 @@ const SPONSORS = [
   },
 ];
 
+const PARTNERS = [
+  {
+    name: "Gordone",
+    lightLogo: gordone,
+    darkLogo: gordone,
+  },
+  {
+    name: "Onyx",
+    lightLogo: onyx,
+    darkLogo: onyx,
+  },
+  {
+    name: "Pw",
+    lightLogo: pw,
+    darkLogo: pw,
+  },
+  {
+    name: "Rwr",
+    lightLogo: rwr,
+    darkLogo: rwr,
+  },
+];
+
 const CO_LEAD_SPONSORS = [
   {
     name: "Mosguard",
     lightLogo: mosguardLogo,
     darkLogo: mosguardLogo,
+  },
+  {
+    name: "Sozo",
+    lightLogo: sozoLogo,
+    darkLogo: sozoLogo,
   },
 ];
 
@@ -174,6 +206,23 @@ export default function Home({ theme = "dark" }) {
                       theme === "dark" ? sponsor.darkLogo : sponsor.lightLogo
                     }
                     alt={sponsor.name}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="sponsors__group">
+            <h3>Partners</h3>
+
+            <div className="sponsors__group-logos">
+              {PARTNERS.map((partner) => (
+                <div className="sponsor-logo" key={partner.name}>
+                  <img
+                    src={
+                      theme === "dark" ? partner.darkLogo : partner.lightLogo
+                    }
+                    alt={partner.name}
                   />
                 </div>
               ))}
