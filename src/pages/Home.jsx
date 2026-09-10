@@ -11,6 +11,8 @@ import gordone from "../assets/Sponsors/partner_Gordone.webp";
 import onyx from "../assets/Sponsors/partner_Onyx.webp";
 import pw from "../assets/Sponsors/partner_PW.webp";
 import rwr from "../assets/Sponsors/partner_RwR.webp";
+import asuraAthlete from "../assets/Sponsors/asura_athlete.webp";
+import soulful from "../assets/Sponsors/soulful.webp";
 import "./home.css";
 
 const SPONSORS = [
@@ -47,6 +49,16 @@ const PARTNERS = [
     name: "Rwr",
     lightLogo: rwr,
     darkLogo: rwr,
+  },
+  {
+    name: "AsuraAthlete",
+    lightLogo: asuraAthlete,
+    darkLogo: asuraAthlete,
+  },
+  {
+    name: "Soulful",
+    lightLogo: soulful,
+    darkLogo: soulful,
   },
 ];
 
